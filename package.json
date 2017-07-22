@@ -1,0 +1,27 @@
+{
+  "name": "whippsofacto",
+  "version": "1.0.0",
+  "description": "Theme developed for Whippy's website.",
+  "main": "index.php",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/whippsofacto"
+  },
+  "keywords": [
+    "sass",
+    "grunt",
+    "wordpress",
+    "autoprefixer",
+    "jslint",
+    "underscores"
+  ],
+  "author": "Stephen Whipp",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}
