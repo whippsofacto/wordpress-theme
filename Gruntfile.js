@@ -10,8 +10,8 @@ expanded (human readable) css file from the style.scss and it's partials and
 places it in the compiled folder. Dist creates a minified version from the same
 style.scss sheet and places it also, in the compiled folder.
 
-[autoprefixer] task
-The autoprefixer will automatically add any required prefixes to scss/css in order
+[postcss] task
+The postcss will autoprefix (automatically add any required prefixes) to scss/css in order
 to ensure styles will run across different browsers.
 
 */
