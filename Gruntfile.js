@@ -45,18 +45,23 @@ module.exports = function(grunt){
         }
       }
     },
-    /* autoprefixer Task*/
-    autoprefixer:{
-      options:{
-        browsers:['last 2 versions']
-      },
-      //prefix all files
-      multiple_files:{
-        expand:true,
-        flatten:true,
-        src:'compiled/*.css',
-        dest:''
-      }
+    postcss: {
+      options: {
+        map: false,
+        processors: [
+          require('autoprefixer')
+          ({
+            browsers: ['last 2 versions']
+           })
+         ]
+       },
+       //prefix all files
+       multiple_files:{
+         expand:true,
+         flatten:true,
+         src:'compiled/*.css',
+         dest:''
+       }
     },
     /* Watch Task*/
     watch:{
@@ -64,7 +69,7 @@ module.exports = function(grunt){
           /*Anthing that happens to any file within the project
           that contains .scss then some other task will be triggered*/
           files:'**/*.scss',
-          tasks: ['sass','autoprefixer']
+          tasks: ['sass','postcss']
         }
     }
 
@@ -73,7 +78,7 @@ module.exports = function(grunt){
   //Tell Grunt to load the tasks
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-postcss');
   grunt.registerTask('default',['watch']);
 
 }
