@@ -26,7 +26,7 @@ module.exports = function(grunt){
         },
         files:{
           //where I want to put the file : where I'm getting the file from
-          'compiled/style.css': 'sass/style.scss'
+          'style-human.css': 'sass/style.scss'
         }
       },
       //distribution version of sass compilation task
@@ -37,7 +37,7 @@ module.exports = function(grunt){
         },
         files:{
           //where I want to put the file : where I'm getting the file from
-          'compiled/style-min.css': 'sass/style.scss'
+          'style.css': 'sass/style.scss'
         }
       }
     },
