@@ -9,8 +9,12 @@ The sass task is divided into two subsections dev and dist. Dev creates an
 expanded (human readable) css file from the style.scss and it's partials and
 places it in the compiled folder. Dist creates a minified version from the same
 style.scss sheet and places it also, in the compiled folder.
-*/
 
+[autoprefixer] task
+The autoprefixer will automatically add any required prefixes to scss/css in order
+to ensure styles will run across different browsers.
+
+*/
 module.exports = function(grunt){
 
   grunt.initConfig({
@@ -26,7 +30,7 @@ module.exports = function(grunt){
         },
         files:{
           //where I want to put the file : where I'm getting the file from
-          'style-human.css': 'sass/style.scss'
+          'compiled/style-human.css': 'sass/style.scss'
         }
       },
       //distribution version of sass compilation task
@@ -37,8 +41,21 @@ module.exports = function(grunt){
         },
         files:{
           //where I want to put the file : where I'm getting the file from
-          'style.css': 'sass/style.scss'
+          'compiled/style.css': 'sass/style.scss'
         }
+      }
+    },
+    /* autoprefixer Task*/
+    autoprefixer:{
+      options:{
+        browsers:['last 2 versions']
+      },
+      //prefix all files
+      multiple_files:{
+        expand:true,
+        flatten:true,
+        src:'compiled/*.css',
+        dest:''
       }
     },
     /* Watch Task*/
@@ -47,7 +64,7 @@ module.exports = function(grunt){
           /*Anthing that happens to any file within the project
           that contains .scss then some other task will be triggered*/
           files:'**/*.scss',
-          tasks: ['sass']
+          tasks: ['sass','autoprefixer']
         }
     }
 
@@ -56,6 +73,7 @@ module.exports = function(grunt){
   //Tell Grunt to load the tasks
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.registerTask('default',['watch']);
 
 }
