@@ -1,3 +1,16 @@
+/* Gruntfile
+
+How it works?
+The watch task looks for any file with the extention .scss. When there is a
+change to these files it will run the [sass] task.
+
+[sass] task
+The sass task is divided into two subsections dev and dist. Dev creates an
+expanded (human readable) css file from the style.scss and it's partials and
+places it in the compiled folder. Dist creates a minified version from the same
+style.scss sheet and places it also, in the compiled folder.
+*/
+
 module.exports = function(grunt){
 
   grunt.initConfig({
