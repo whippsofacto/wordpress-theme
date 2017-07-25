@@ -85,7 +85,7 @@ module.exports = function(grunt){
         js:{
           /*Anthing that happens to any file within the project
           that contains .js then some other task will be triggered*/
-          files:'**/*.js',
+          files:'js/script.js',
           tasks: ['uglify'],
           options: {
             livereload:true
