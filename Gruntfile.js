@@ -62,6 +62,15 @@ module.exports = function(grunt){
          dest:''
        }
     },
+    /* Minify JS with Uglify Task */
+      uglify: {
+        my_target: {
+          files: {
+            //where I want to put the file : where I'm getting the file from
+            'js/script.min.js': 'js/script.js'
+           }
+         }
+     },
     /* Watch Task*/
     watch:{
         css:{
@@ -77,7 +86,7 @@ module.exports = function(grunt){
           /*Anthing that happens to any file within the project
           that contains .js then some other task will be triggered*/
           files:'**/*.js',
-          tasks: [],
+          tasks: ['uglify'],
           options: {
             livereload:true
           }
@@ -90,6 +99,7 @@ module.exports = function(grunt){
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-postcss');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.registerTask('default',['watch']);
 
 }
