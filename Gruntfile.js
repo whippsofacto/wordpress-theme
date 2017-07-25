@@ -72,7 +72,17 @@ module.exports = function(grunt){
           options: {
             livereload:true
           }
+        },
+        js:{
+          /*Anthing that happens to any file within the project
+          that contains .js then some other task will be triggered*/
+          files:'**/*.js',
+          tasks: [],
+          options: {
+            livereload:true
+          }
         }
+
      }
   });
 
