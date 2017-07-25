@@ -14,6 +14,10 @@ style.scss sheet and places it also, in the compiled folder.
 The postcss will autoprefix (automatically add any required prefixes) to scss/css in order
 to ensure styles will run across different browsers.
 
+[jsHint] task
+Lints the js code found in script.js and gruntfile.js and feedsback any errors using
+the stylish module to the command line. It is added to the wacth task so that only changes to
+
 */
 module.exports = function(grunt){
   grunt.initConfig({
@@ -73,9 +77,10 @@ module.exports = function(grunt){
      },
     /*jsHint Task */
       jshint: {
-          all: ['Gruntfile.js', 'js/script.js','js/script.min.js'],
+          all: ['Gruntfile.js', 'js/script.js'],
           options: {
           // more options here if you want to override JSHint defaults
+          reporter: require('jshint-stylish'),
           globals: {
             jQuery: true,
             console: true,
@@ -95,8 +100,7 @@ module.exports = function(grunt){
           }
         },
         js:{
-          /*Anthing that happens to any file within the project
-          that contains .js then some other task will be triggered*/
+          /*Anthing that happens to script.js will trigger [uglify]*/
           files:'js/script.js',
           tasks: ['uglify'],
           options: {
@@ -104,9 +108,9 @@ module.exports = function(grunt){
           }
         },
         jhint:{
-          /*Anthing that happens to any file within the project
-          that contains .js then some other task will be triggered*/
-          files:['Gruntfile.js','js/script.min.js'],
+          /*Anthing that happens to gruntfile or script.js
+          will trigger jshint to run on those two files.*/
+          files:['Gruntfile.js', 'js/script.js'],
           tasks: ['jshint'],
           options: {
             livereload:true
