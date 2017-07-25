@@ -71,6 +71,18 @@ module.exports = function(grunt){
            }
          }
      },
+    /*jsHint Task */
+      jshint: {
+          all: ['Gruntfile.js', 'js/script.js','js/script.min.js'],
+          options: {
+          // more options here if you want to override JSHint defaults
+          globals: {
+            jQuery: true,
+            console: true,
+            module: true
+         }
+      }
+    },
     /* Watch Task*/
     watch:{
         css:{
@@ -90,8 +102,16 @@ module.exports = function(grunt){
           options: {
             livereload:true
           }
-        }
-
+        },
+        jhint:{
+          /*Anthing that happens to any file within the project
+          that contains .js then some other task will be triggered*/
+          files:['Gruntfile.js','js/script.min.js'],
+          tasks: ['jshint'],
+          options: {
+            livereload:true
+          }
+       }
      }
   });
 
@@ -103,4 +123,4 @@ module.exports = function(grunt){
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.registerTask('default',['watch']);
 
-}
+};
