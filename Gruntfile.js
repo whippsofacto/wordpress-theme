@@ -16,7 +16,6 @@ to ensure styles will run across different browsers.
 
 */
 module.exports = function(grunt){
-
   grunt.initConfig({
     //tell Grunt where the package file is
     pkg: grunt.file.readJSON('package.json'),
@@ -69,10 +68,12 @@ module.exports = function(grunt){
           /*Anthing that happens to any file within the project
           that contains .scss then some other task will be triggered*/
           files:'**/*.scss',
-          tasks: ['sass','postcss']
+          tasks: ['sass','postcss'],
+          options: {
+            livereload:true
+          }
         }
-    }
-
+     }
   });
 
   //Tell Grunt to load the tasks
