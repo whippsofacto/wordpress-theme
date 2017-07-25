@@ -115,6 +115,14 @@ module.exports = function(grunt){
           options: {
             livereload:true
           }
+       },
+       php:{
+         /*reload when changes occur in any of the php files but don't run
+         any tasks*/
+         files:'**/*.php',
+         options:{
+           livereload:true
+         }
        }
      }
   });
