@@ -1,12 +1,28 @@
 .site-content{
-  display: flex;
-
+  display: block;
 }
 
-.content-area{
-  flex: 2;
+.content-area .site-main{
+  border: 3px solid red;
+  width:75%;
+  float: left;
 }
 
 .site-content .widget-area{
-  flex: 1;
+  border: 3px solid blue;
+  width: 25%;
+  float: right;
+}
+
+body{
+    border: 3px solid purple;
+}
+
+
+
+#page{
+  max-width: 100%;
+  padding: 5px;
+  margin: 60px auto;
+  border: 3px solid black;
 }
