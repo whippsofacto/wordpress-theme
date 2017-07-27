@@ -828,31 +828,35 @@ object {
 /*--------------------------------------------------------------
 # flexLayout
 --------------------------------------------------------------*/
-.site-content {
-  display: block;
-}
-
-.content-area .site-main {
-  border: 3px solid red;
-  width: 75%;
-  float: left;
-}
-
-.site-content .widget-area {
-  border: 3px solid blue;
-  width: 25%;
-  float: right;
-}
-
 body {
-  border: 3px solid purple;
+  width: 90%;
+  margin: 0 auto;
+  padding: 2%;
+  line-height: 1.6;
+  font-family: arial;
 }
 
-#page {
-  max-width: 100%;
-  padding: 5px;
-  margin: 60px auto;
-  border: 3px solid black;
+.site-content {
+  border: 3px solid green;
+  display: flex;
+}
+
+.content-area {
+  border: 3px solid red;
+  width: 75% !important;
+}
+
+.widget-area {
+  border: 3px solid blue;
+  width: 25% !important;
+}
+
+.box {
+  display: inline-block;
+  margin: 5px;
+  flex-grow: 1;
+  padding: 10px;
+  width: calc(100% * (1/3));
 }
 
 /*--------------------------------------------------------------*/
