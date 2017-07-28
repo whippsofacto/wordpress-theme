@@ -119,7 +119,7 @@ module.exports = function(grunt){
        php:{
          /*reload when changes occur in any of the php files but don't run
          any tasks*/
-         files:'**/*.php',
+         files:['**/*.php','../../plugins/custom-page-type.php'],
          options:{
            livereload:true
          }
