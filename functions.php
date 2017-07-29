@@ -68,7 +68,15 @@ function whippsofacto_setup() {
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
 
-	// Add video header --- />
+	/**
+	* My Custom Stuff is below here!
+  *
+	* 1. Add video header as part of the CUSTOMIZE section of homepage
+	* 2. Add my Custom Post Type
+	*
+	*/
+
+	//1: Activate Video Header
 	add_theme_support( 'custom-header', array(
 		'flex-width'    => true,
 		'width'         => 980,
@@ -77,6 +85,15 @@ function whippsofacto_setup() {
 		'default-image' => get_template_directory_uri() . '/images/header.jpg',
 	  'video' => true
    ));
+
+	 //2: Add my post-type
+	 include 'includes/_custom-page-type.php';
+
+	 /**
+	 * -----------------------------------------------------------------------//
+	 *         						end of my section
+	 * -----------------------------------------------------------------------//
+	 */
 
 	/**
 	 * Add support for core custom logo.

@@ -28,11 +28,8 @@
 		<div class="site-branding">
 			<?php
 			the_custom_logo();
-			//changed operator to OR instead of && 
-			if ( is_front_page() || is_home() ) : ?>
+			if ( is_front_page() && is_home() ) : ?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<!--/*added the header to the home page */-->
-				<img src="<?php echo( get_header_image() ); ?>" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" />
 			<?php else : ?>
 				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 			<?php
