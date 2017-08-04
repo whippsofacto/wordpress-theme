@@ -27,15 +27,18 @@
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
 			<?php
+
 			the_custom_logo();
 			if ( is_front_page() && is_home() ) : ?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 
 			<!-- if on a "projects page" -->
 			<?php elseif ( is_singular('projects') ) :?>
-				<?php the_custom_header_markup();?>
+				<?php
+				the_custom_header_markup();
+				?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<h1> I'm inside the conditional statement </h1>
+				<h1 class="site-title"> I'm inside the conditional statement </h1>
 
 
 			<!-- Show video from header media on the front page -->

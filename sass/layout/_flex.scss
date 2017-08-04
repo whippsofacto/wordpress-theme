@@ -1,14 +1,24 @@
 body{
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
-  padding: 2%;
   line-height: 1.6;
   font-family: arial;
+}
+
+.site-title,
+.site-description,
+.main-navigation{
+  width: 95% !important;
+  margin: 0 auto !important;
+  display: flex !important;
+  padding-top: 5px;
 }
 
 .site-content{
   border: 3px solid green;
   display: flex;
+  width: 95%;
+  margin: 0 auto;
 }
 
 .content-area{
@@ -25,4 +35,14 @@ width: 70% !important;
   margin:5px;
   padding: 10px;
   width: 100%;
+}
+
+.wp-custom-header iframe,
+.wp-custom-header img,
+.wp-custom-header video {
+  position: flex;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 80vh;
 }

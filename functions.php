@@ -72,22 +72,17 @@ function whippsofacto_setup() {
 	* My Custom Stuff is below here!
   *
 	* 1. Add video header as part of the CUSTOMIZE section of homepage
-	* 2. Add my Custom Post Type
+	* 2. Add my Custom Page/Post-Type
 	*
 	*/
 
 	//1: Activate Video Header
-	add_theme_support( 'custom-header', array(
-		'flex-width'    => true,
-		'width'         => 980,
-		'flex-height'    => true,
-		'height'        => 200,
-		'default-image' => get_template_directory_uri() . '/images/header.jpg',
-	  'video' => true
-   ));
+	include 'includes/_video-header.php';
 
-	 //2: Add my post-type
-	 include 'includes/_custom-page-type.php';
+	//2: Add my post-type
+	include 'includes/_custom-page-type.php';
+
+
 
 	 /**
 	 * -----------------------------------------------------------------------//

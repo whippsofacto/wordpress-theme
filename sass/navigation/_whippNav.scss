@@ -1,0 +1,9 @@
+.menu-nav-container ul li:not(:first-child){
+  padding-left: 10px;
+  margin-bottom: 30px;
+}
+
+.menu-nav-container ul li .sub-menu .menu-item{
+  padding-left: 0px;
+  margin-bottom: 0px;
+}
