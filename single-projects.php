@@ -11,7 +11,6 @@ get_header(); ?>
 
 	<div id="primary" class="content-area box">
 		<main id="main" class="site-main">
-			<h1> Hello Projects! </h1>
 		<?php
 		while ( have_posts() ) : the_post();
 
@@ -29,10 +28,6 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-<div class="sidebar-area">
 <?php
 get_sidebar();
-?>
-</div>
-<?php
 get_footer();

@@ -73,7 +73,7 @@ function whippsofacto_setup() {
   *
 	* 1. Add video header as part of the CUSTOMIZE section of homepage
 	* 2. Add my Custom Page/Post-Type
-	*
+	* 3. include Featured Images
 	*/
 
 	//1: Activate Video Header
@@ -82,7 +82,8 @@ function whippsofacto_setup() {
 	//2: Add my post-type
 	include 'includes/_custom-page-type.php';
 
-
+	//3: Enable featured images
+	add_theme_support( 'post-thumbnails' );
 
 	 /**
 	 * -----------------------------------------------------------------------//

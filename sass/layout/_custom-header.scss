@@ -1,3 +1,71 @@
+
+// remove all text decorarion from the header
+.site-title{
+  text-align: center;
+}
+
+.site-title a {
+  text-decoration: none;
+  color: #000;
+}
+
+.site-title a:link {
+    text-decoration: none;
+}
+
+.site-title a:visited {
+    text-decoration: none;
+}
+
+.site-title a:hover {
+    text-decoration: none;
+}
+
+.site-title a:active {
+    text-decoration: none;
+}
+
+// end of remove info from title
+.site-description{
+  text-align: center;
+}
+
+
+
+//For header logo ----------------------------------//
+.header-outter-container{
+  position: absolute;
+  top: 15%;
+  display: flex;
+  width: 100%;
+}
+.header-container{
+margin: 0 auto;
+width: 95%;
+display: flex;
+
+}
+
+.header-container img{
+  margin: 0 auto;
+}
+
+
+//added and removed with jQuery
+.hover{
+  opacity: 0.1;
+  transition: ease-in-out opacity 1s;
+  cursor: pointer;
+}
+
+.off-hover{
+  opacity: 1;
+  transition: ease-in-out opacity 1s;
+}
+// ------- end of header logo -----------------------//
+
+
+//For video headers if activated outside of plugin.
 #wp-custom-header-video-button{
   float: right;
   top: 2%;
@@ -13,3 +81,5 @@ background-color: rgba(1,0,0,0.5)
 .wp-custom-header-video-pause{
  background-color: red;
 }
+
+// --------- end of headers activated outside of plugin ---------------//

@@ -5,30 +5,22 @@ body{
   font-family: arial;
 }
 
-.site-title,
-.site-description,
-.main-navigation{
-  width: 95% !important;
-  margin: 0 auto !important;
-  display: flex !important;
-  padding-top: 5px;
-}
 
 .site-content{
-  border: 3px solid green;
   display: flex;
   width: 95%;
   margin: 0 auto;
 }
 
 .content-area{
-border: 3px solid red;
-width: 70% !important;
+width: auto;
+flex: 3;
+text-align: center;
 }
 
 .widget-area{
   border: 3px solid blue;
-  width:30% !important;
+  flex: 1;
 }
 
 .box{

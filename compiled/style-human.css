@@ -44,6 +44,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css?family=Anton|Lobster");
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -323,6 +324,15 @@ big {
   font-size: 125%;
 }
 
+h1 {
+  font-family: "Anton", sans-serif;
+  color: #000;
+}
+
+p {
+  font-family: "Anton", sans-serif;
+}
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -356,10 +366,11 @@ hr {
   margin-bottom: 1.5em;
 }
 
+/*
 ul, ol {
-  margin: 0 0 1.5em 3em;
+	margin: 0 0 1.5em 3em;
 }
-
+*/
 ul {
   list-style: disc;
 }
@@ -368,12 +379,13 @@ ol {
   list-style: decimal;
 }
 
+/*
 li > ul,
 li > ol {
-  margin-bottom: 0;
-  margin-left: 1.5em;
+	margin-bottom: 0;
+	margin-left: 1.5em;
 }
-
+*/
 dt {
   font-weight: bold;
 }
@@ -505,94 +517,41 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-.main-navigation {
-  clear: both;
-  display: block;
-  width: 100%;
-}
-.main-navigation ul {
-  display: none;
-  list-style: none;
-  margin: 0;
-  padding-left: 0;
-}
-.main-navigation ul ul {
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-  float: left;
-  position: absolute;
-  top: 100%;
-  left: -999em;
-  z-index: 99999;
-}
-.main-navigation ul ul ul {
-  left: -999em;
-  top: 0;
-}
-.main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
-  left: 100%;
-}
-.main-navigation ul ul a {
-  width: 200px;
-}
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-  left: auto;
-}
-.main-navigation li {
-  float: left;
-  position: relative;
-}
-.main-navigation a {
-  display: block;
-  text-decoration: none;
-}
-
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-  display: block;
-}
-
-@media screen and (min-width: 37.5em) {
-  .menu-toggle {
-    display: none;
-  }
-
-  .main-navigation ul {
-    display: block;
-  }
-}
-.site-main .comment-navigation, .site-main
-.posts-navigation, .site-main
-.post-navigation {
-  margin: 0 0 1.5em;
-  overflow: hidden;
-}
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-  float: left;
-  width: 50%;
-}
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-  float: right;
-  text-align: right;
-  width: 50%;
-}
-
 /*--------------------------------------------------------------
 ## Whippy Nav
 --------------------------------------------------------------*/
-.menu-nav-container ul li:not(:first-child) {
-  padding-left: 10px;
-  margin-bottom: 30px;
-}
-
 .menu-nav-container ul li .sub-menu .menu-item {
   padding-left: 0px;
   margin-bottom: 0px;
+  background-color: #FFF;
+}
+
+.menu-nav-container {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-nav-container ul {
+  width: auto;
+  list-style: none;
+  padding-left: 0px;
+}
+
+.menu-nav-container ul li {
+  display: inline-block;
+}
+
+.sub-menu {
+  display: none;
+  opacity: 0;
 }
 
 /*--------------------------------------------------------------
@@ -847,30 +806,21 @@ body {
   font-family: arial;
 }
 
-.site-title,
-.site-description,
-.main-navigation {
-  width: 95% !important;
-  margin: 0 auto !important;
-  display: flex !important;
-  padding-top: 5px;
-}
-
 .site-content {
-  border: 3px solid green;
   display: flex;
   width: 95%;
   margin: 0 auto;
 }
 
 .content-area {
-  border: 3px solid red;
-  width: 70% !important;
+  width: auto;
+  flex: 3;
+  text-align: center;
 }
 
 .widget-area {
   border: 3px solid blue;
-  width: 30% !important;
+  flex: 1;
 }
 
 .box {
@@ -893,6 +843,63 @@ body {
 /*--------------------------------------------------------------
 # customHeader
 --------------------------------------------------------------*/
+.site-title {
+  text-align: center;
+}
+
+.site-title a {
+  text-decoration: none;
+  color: #000;
+}
+
+.site-title a:link {
+  text-decoration: none;
+}
+
+.site-title a:visited {
+  text-decoration: none;
+}
+
+.site-title a:hover {
+  text-decoration: none;
+}
+
+.site-title a:active {
+  text-decoration: none;
+}
+
+.site-description {
+  text-align: center;
+}
+
+.header-outter-container {
+  position: absolute;
+  top: 15%;
+  display: flex;
+  width: 100%;
+}
+
+.header-container {
+  margin: 0 auto;
+  width: 95%;
+  display: flex;
+}
+
+.header-container img {
+  margin: 0 auto;
+}
+
+.hover {
+  opacity: 0.1;
+  transition: ease-in-out opacity 1s;
+  cursor: pointer;
+}
+
+.off-hover {
+  opacity: 1;
+  transition: ease-in-out opacity 1s;
+}
+
 #wp-custom-header-video-button {
   float: right;
   top: 2%;

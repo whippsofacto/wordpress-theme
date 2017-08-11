@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Anton|Lobster');
+
+$text :  'Anton', sans-serif;
+$heading : 'Lobster', cursive;
+
+
+h1{
+font-family: $text;
+color: #000;
+}
+
+p {
+  font-family: $text;
+}
