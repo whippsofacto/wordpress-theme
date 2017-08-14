@@ -18,50 +18,33 @@ get_header(); ?>
 		<main id="main" class="site-main">
 
 			<?php
+			$args = array( 'post_type' => ['post','projects'], 'posts_per_page' => 10 );
+      $loop = new WP_Query( $args );
 
-						//args for displaying project info on projects page
-						$args = [
-								'post_type'      => ['projects','post'],
-								'posts_per_page' => 10,
-								'paged' => get_query_var('page')
-						];
-						//define a query to source the results
-						$loop = new WP_Query($args);
-			      while ( have_posts() ) : the_post();
-
-			     	get_template_part( 'template-parts/content', 'page' );
-
-			     	// If comments are open or we have at least one comment, load up the comment template.
-			    	if ( comments_open() || get_comments_number() ) :
-			     		comments_template();
-			     	endif;
+			while ( $loop->have_posts() ) : $loop->the_post();
 
 
+				get_template_part( 'template-parts/content', 'page' );
+				if ( !empty(has_post_thumbnail() )) {
+						 	the_title();
+					  } else {
+				    	the_post_thumbnail();
+			      }
+				echo '<div class="entry-content">';
+				the_content();
+				echo '</div>';
 
-			//loop
-			while ($loop->have_posts()) {
-			$loop->the_post();
+				/* If comments are open or we have at least one comment, load up the comment template.
+				if ( comments_open() || get_comments_number() ) :
+					comments_template();
+				endif;*/
+
+			endwhile; // End of the loop.
 			?>
-			<!-- the output -->
-			<div class="entry-content">
-			 <div class='project_page_posts_container'>
-				 <?php if (!has_post_thumbnail()){
-				     the_title();
-				 } else {
-					the_post_thumbnail();
-				 }?>
-			   <?php the_content(); ?>
-				 <?php the_tags(); ?>
-				 <hr />
-			 </div><!-- end of project page post container -->
-			</div>
-			<?php
 
-			}
-		 endwhile; // End of the loop.
-		 ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
+
 <?php
 get_sidebar();
 get_footer();
