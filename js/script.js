@@ -23,7 +23,14 @@ jQuery( "h1:contains('The Island – Web VR')" )
 /* Nav */
 
 jQuery(".burger-nav").click(function(){
-  jQuery('#myNav').toggleClass('show-nav');
+  jQuery('#myNav').addClass('show-nav');
+  jQuery('.burger-nav').css('display','none');
+});
+
+jQuery("#closeIcon").click(function(){
+  jQuery('#myNav').removeClass('show-nav');
+  console.log('hello from close!');
+  jQuery('.burger-nav').css('display','');
 });
 
 // take the sub menu out of the document flow
@@ -40,6 +47,9 @@ jQuery('.menu-nav-container').append(element);
 jQuery('#searchNav').click(function(){
   jQuery('#search-container').toggleClass('show-search');
 });
-
+//fs searchBarToggle
+jQuery('#fs_searchNav').click(function(){
+  jQuery('#search-container').toggleClass('show-search');
+});
 //search Bar two lines
 jQuery('.search-submit').before("<br />","<br />");

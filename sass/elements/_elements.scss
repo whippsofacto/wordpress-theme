@@ -10,7 +10,9 @@ html {
 
 body {
 	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
-}
+	max-width: 1500px;
+	margin: 0 auto ;
+	}
 
 blockquote, q {
 	quotes: "" "";

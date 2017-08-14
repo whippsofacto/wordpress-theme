@@ -9,22 +9,35 @@ $heebo: 'Heebo', sans-serif;
 $raleway: 'Raleway', sans-serif;
 
 .entry-header{
-font-family: $hammer;
-color: #000;
+font-family: $popins;
+color: #333;
 text-transform: uppercase;
-font-size: 2em;
+font-size: 1.7em;
+}
 
+.site-title{
+  font-family: $popins;
+  color: #333;
+  text-transform: uppercase;
+  font-size: 1.7em;
 }
 
 h3{
-  font-family: $hammer;
+  font-family: $raleway;
   text-transform: uppercase;
   font-size: 1.5em;
 }
 
 .project-blurb {
-  font-size: 1.3em;
-  font-family: $julius;
+  font-size: 1.4em;
+  text-rendering:optimizeLegibility;
+  color: #333;
+  text-transform: none;
+  font-family: $raleway;
+}
+
+p{
+  font-family: $heebo;
 }
 
 //Nav Type ----------------------------//
@@ -44,7 +57,7 @@ h3{
 
 #myForm{
   font-family: $popins;
-  font-size: 1.5em;
+  font-size: 1.1em;
 }
 
 #myForm input, textarea, button {

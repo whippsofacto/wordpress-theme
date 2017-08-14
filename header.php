@@ -90,25 +90,43 @@
 			<div id='search-container' class='search-overlay'>
 			 <?php get_search_form(); ?>
 		</div> <!--seatch overlay -->
-				<hr>
+				<hr class='socialHr'>
 			 <div id="social_nav_container">
 				<div class="social-nav-inner-container">
 		 	  	 <i id="searchNav" class="fa fa-search" aria-hidden="true"></i>
 			  </div>
-			  <div class="social-nav-inner-container">
+			  <div class="mids social-nav-inner-container">
 					<a href="https://www.github.com/whippsofacto">
 			   	 <i class="fa fa-github" aria-hidden="true"></i>
 				  </a>
 			  </div>
-			  <div class=" social-nav-inner-container">
+			  <div class="social-nav-inner-container">
 					<a href="https://www.twitter.com/whippsofacto">
 				  	<i class="fa fa-twitter" aria-hidden="true"></i>
 				 </a>
 				</div>
-
 			</div><!-- Social Nav Container -->
-			<hr>
+			<hr class="socialHr">
 		 </div> <!--social search section -->
+				<div id="fs_social_nav_container">
+					<div class="fs-social-nav-inner-container">
+							<i id="closeIcon" class=" fa fa-times-circle-o" aria-hidden="true"></i>
+					</div>
+				 <div class="fs-social-hr fs-social-nav-inner-container">
+						<i id="fs_searchNav" class="fs fa fa-search" aria-hidden="true"></i>
+				 </div>
+				 <div class="fs-social-hr fs-social-nav-inner-container">
+					 <a href="https://www.github.com/whippsofacto">
+						<i class="fs fa fa-github" aria-hidden="true"></i>
+					 </a>
+				 </div>
+				 <div class="fs-social-hr fs-social-nav-inner-container">
+					 <a href="https://www.twitter.com/whippsofacto">
+						 <i class="fs fa fa-twitter" aria-hidden="true"></i>
+					</a>
+				 </div>
+			 </div><!-- FS Social Nav Container -->
+			</div> <!--social search section -->
 	  </div> <!-- #end of Right Elements -->
 	 </div><!-- #end of mynav contianer -->
 	</div> <!-- #end of nav contianer -->
