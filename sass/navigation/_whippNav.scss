@@ -1,38 +1,227 @@
 
+//hamburger icon
+.burger-nav {
+  position: fixed;
+  right: 30px;
+  top: 30px;
+  color: white;
+  z-index: 9999;
+  transform: rotate(-90deg);
+  letter-spacing: 3px;
+  font-size: 40px;
+  cursor: pointer;
+  font-family: $julius;
+}
+
+//nav movement classes
+
+.overlay {
+    transition: 0.2s;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(255,255,255);
+    background-color: rgba(255,255,255, 1);
+    overflow-x: hidden;
+}
 
 
 
-.menu-nav-container ul li .sub-menu .menu-item{
+// toggle to show nav
+.show-nav{
+  width:100%;
+  opacity: 1;
+}
+
+//surrounds all the nav elements from inside the #myNav container
+#myNav_container{
+display: -webkit-box;
+display: -moz-box;
+width: 76%;
+margin: 0 auto;
+}
+
+//left Elements -- elements to be displayed on the left
+#leftElements{
+flex: 1;
+text-align: left;
+margin-right: 25%;
+}
+
+//right Elements -- elements to be displayed on the right
+#rightElements{
+  flex: 1;
+  justify-content: center;
+}
+
+
+#myNav nav ul {
+  list-style: none;
   padding-left: 0px;
-  margin-bottom: 0px;
-  background-color: #FFF;
 }
 
 
-.menu-nav-container{
-  height: 100%;
-    padding: 0;
-    margin: 0;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+#primary-menu{
 
-.menu-nav-container ul{
-   width: auto;
-   list-style: none;
-   padding-left: 0px;
-}
-
-.menu-nav-container ul li{
-   display: inline-block;
 }
 
 .sub-menu{
-  display: none;
-  opacity: 0;
+max-width: 69%;
+}
+
+#myNav nav ul li a{
+text-decoration: none;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: left;
+    margin-top: 30px;
+}
+
+//contact form in nav
+#myForm{
+flex: 1;
+text-align:left;
+color: #4f4f4f;
+}
+
+.formFlex{
+ flex: 1;
+ width:95%;
+ margin: 0px 0px 10px 0px;
+}
+
+#myForm h3{
+  margin-bottom: 5px;
+}
+
+#myForm button{
+  width: 30%;
+  color: white;
+  justify-content: right;
+  padding: 15px 0 15px 0;
+  background-color: #4f4f4f;
+  border-radius: 5px;
+}
+
+//search button
+
+.search-container{
+display: table;
+margin-top:100px;
+}
+
+//font awrsome icons
+
+#social_nav_container{
+width: 100%;
+}
+
+#social_nav_container a{
+text-decoration: none;
+color: #4f4f4f !important;
+}
+
+.social-nav-inner-container{
+  display: inline-block;
+  text-align: center;
+  width: 32%;
+  margin-bottom: 8px;
+  padding: 5px;
+}
+
+.fa-twitter::before{
+  font-size: 2em;
+  cursor: pointer;
+  transition: 0.2s linear;
+}
+.fa-github::before{
+  font-size: 2em;
+  cursor: pointer;
+  transition: 0.2s linear;
+}
+
+.fa-search::before{
+  font-size: 2em;
+  cursor: pointer;
+  transition: 0.2s linear;
+}
+
+.fa-search:hover{
+  font-size: 1.2em;
+  color: #5198B8;
+}
+
+.fa-twitter:hover{
+  height: 1.2em;
+  color: #35D7DB;
+}
+
+.fa-github:hover{
+  font-size: 1.2em;
+  color: #FF7378;
+}
+
+
+
+//Search button
+.search-overlay{
+  transition: 0.2s;
+  height: 100%;
+  width: 0;
+  position: relative;
+  z-index: 1;
+  background-color: rgb(255,255,255);
+  background-color: rgba(255,255,255, 1);
+  overflow-x: hidden;
+}
+
+.show-search{
+  width: 100%;
+}
+
+.search-field{
+width: -moz-available;
+width:  -webkit-fill-available;
+}
+
+input[type=submit]{
+color: #fff;
+background-color: #4f4f4f;
+width: -moz-available;
+width:  -webkit-fill-available;
+text-align: center;
+padding: 10px 0px 10px 0px;
+border-radius: 5px;
+}
+//Nav Media
+
+//Nav Media Query to re-align elements to column
+@media (max-width:730px) and (min-width:0px) {
+  #myNav_container{
+    flex-flow: column;
+    margin-top: -10px;
+  }
+
+  .sub-menu hr:last-child{
+    display: none;
+  }
+
+
+
+  #rightElements{
+    display: inline-grid;
+    flex: 0;
+    justify-content: left;
+  }
+
+  #rightElements :nth-child(1) { order: 2; };
+  #rightElements :nth-child(2) { order: 1; };
+
 }

@@ -1,14 +1,62 @@
-@import url('https://fonts.googleapis.com/css?family=Anton|Lobster');
+@import url('https://fonts.googleapis.com/css?family=Cinzel|Hammersmith+One|Julius+Sans+One');
+@import url('https://fonts.googleapis.com/css?family=Heebo:100|Just+Another+Hand|Poppins|Raleway:100');
+$cinzel: 'Cinzel', serif;
+$hammer: 'Hammersmith One', sans-serif;
+$julius: 'Julius Sans One', sans-serif;
+$hand: 'Just Another Hand', cursive;
+$popins: 'Poppins', sans-serif;
+$heebo: 'Heebo', sans-serif;
+$raleway: 'Raleway', sans-serif;
 
-$text :  'Anton', sans-serif;
-$heading : 'Lobster', cursive;
-
-
-h1{
-font-family: $text;
+.entry-header{
+font-family: $hammer;
 color: #000;
+text-transform: uppercase;
+font-size: 2em;
+
 }
 
-p {
-  font-family: $text;
+h3{
+  font-family: $hammer;
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+
+.project-blurb {
+  font-size: 1.3em;
+  font-family: $julius;
+}
+
+//Nav Type ----------------------------//
+
+#primary-menu{
+  font-family: $popins;
+  font-size: 2em;
+}
+
+#myNav nav ul li a{
+  color: #4f4f4f;
+}
+
+#myNav nav ul li a:hover{
+  color: #DB5870;
+}
+
+#myForm{
+  font-family: $popins;
+  font-size: 1.5em;
+}
+
+#myForm input, textarea, button {
+ font-family: $raleway;
+}
+
+//seatch button
+.search-form input, button{
+  font-family: $raleway;
+}
+
+.sub-menu{
+  font-family: $heebo;
+  font-size: 1.2em;
 }

@@ -85,6 +85,9 @@ function whippsofacto_setup() {
 	//3: Enable featured images
 	add_theme_support( 'post-thumbnails' );
 
+	//4. Font Awesome
+
+
 	 /**
 	 * -----------------------------------------------------------------------//
 	 *         						end of my section
@@ -149,6 +152,8 @@ function whippsofacto_scripts() {
 	/* Enqueue my own minfied javascript files*/
 	wp_enqueue_script( 'whippsofacto-script-min', get_template_directory_uri() . '/js/script.min.js', array(), '20151215', true );
 
+	// font Awesome
+	wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

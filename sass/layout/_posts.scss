@@ -1,0 +1,59 @@
+.post-flex-container{
+  display: flex;
+  margin:  0;
+  text-decoration: none;
+}
+
+.post-box{
+  padding-top: 1em;
+  padding-bottom: 1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: $hammer;
+  font-weight: 100;
+  color:#4f4f4f!important;
+  background-color: #FFF;
+  margin: 10px;
+  border-radius: 5px;
+  border: solid 1px #4f4f4f;
+}
+
+.post-flex-container a:link {
+    text-decoration: none;
+}
+
+.post-flex-container a:visited {
+    text-decoration: none;
+}
+
+.post-box:hover {
+  text-decoration: none;
+  transition: all ease-in-out 0.5s;
+  color: #FFF !important;
+  background-color: #4f4f4f;
+  border-radius: 5px;
+
+
+}
+
+
+.post-flex-container a:active {
+    text-decoration: none;
+}
+
+
+.post-box-1{
+  flex:3;
+}
+
+.post-box-2{
+  flex:3;
+}
+
+.post-box-3{
+  flex:3;
+}
+
+.other-projects{
+
+}

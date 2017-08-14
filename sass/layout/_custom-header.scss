@@ -51,6 +51,28 @@ display: flex;
 }
 
 
+@media (max-width:910px) and (min-width:0px) {
+
+  .header-outter-container{
+    top: 13%;
+    width: 100%;
+  }
+
+  .header-container img{
+    width: 35%;
+    height: 100%;
+    }
+
+}
+
+@media (max-width:500px) and (min-width:0px) {
+  .header-outter-container{
+    top: 8%;
+    width: 100%;
+  }
+
+}
+
 //added and removed with jQuery
 .hover{
   opacity: 0.1;

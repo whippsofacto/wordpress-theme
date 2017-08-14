@@ -35,7 +35,6 @@
 			<!-- if on a "projects page" -->
 			<?php elseif ( is_singular('projects') ) :?>
 				<div id="header_outter_container" class="header-outter-container"><div id="header_container" class="header-container"> <?the_post_thumbnail()?>  </div></div>
-				<div id="site_tite_and_description" class="site-title-and-description"><h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 
 			<!-- Show video from header media on the front page -->
 			<?php elseif (is_front_page() ) :?>
@@ -56,8 +55,13 @@
 			endif; ?>
 		</div><!-- site_tite_and_description -->
 		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
+	<div class="burger-nav">
+	  <b>|</b><b>|</b><b>|</b>
+	</div>
+	<div id="myNav" class="overlay">
+	 <div id='myNav_container'>
+		 <div id="leftElements">
+		<nav id="site-navigation" class="main-navigation overlay-content">
 			<!--<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php//esc_html_e( 'Primary Menu', 'whippsofacto' ); ?></button>-->
 			<?php
 				wp_nav_menu( array(
@@ -65,7 +69,49 @@
 					'menu_id'        => 'primary-menu',
 				) );
 			?>
-		</nav><!-- #site-navigation -->
+		</nav><!-- # end site-navigation -->
+	</div><!--#end of Elements -->
+  <div id="rightElements">
+		<div id="nav_contact_form" class="overlay-content">
+			<form id="myForm" action="#" method="post">
+				<h2> Get In Touch </h2>
+				<input class="formFlex" type="text" id="fname" name="firstname" placeholder="Name">
+				<br>
+				<input class="formFlex" type="text" id="email" name="email" placeholder="Email">
+				<br>
+				<input class="formFlex" type="text" id="subject" name="subject" placeholder="Subject">
+			  <br>
+	      <textarea class="formFlex" id="message" name="message" placeholder="Message"></textarea>
+				<br>
+				<button id="submitFormButton" class="formFlex" type="submit" value="Submit">Submit</button>
+			</form>
+		</div>
+		<div id="nav_social_search" class="overlay-content">
+			<div id='search-container' class='search-overlay'>
+			 <?php get_search_form(); ?>
+		</div> <!--seatch overlay -->
+				<hr>
+			 <div id="social_nav_container">
+				<div class="social-nav-inner-container">
+		 	  	 <i id="searchNav" class="fa fa-search" aria-hidden="true"></i>
+			  </div>
+			  <div class="social-nav-inner-container">
+					<a href="https://www.github.com/whippsofacto">
+			   	 <i class="fa fa-github" aria-hidden="true"></i>
+				  </a>
+			  </div>
+			  <div class=" social-nav-inner-container">
+					<a href="https://www.twitter.com/whippsofacto">
+				  	<i class="fa fa-twitter" aria-hidden="true"></i>
+				 </a>
+				</div>
+
+			</div><!-- Social Nav Container -->
+			<hr>
+		 </div> <!--social search section -->
+	  </div> <!-- #end of Right Elements -->
+	 </div><!-- #end of mynav contianer -->
+	</div> <!-- #end of nav contianer -->
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
