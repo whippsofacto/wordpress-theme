@@ -31,6 +31,14 @@ jQuery("#closeIcon").click(function(){
   jQuery('#myNav').removeClass('show-nav');
   console.log('hello from close!');
   jQuery('.burger-nav').css('display','');
+  jQuery('#content').css('position','inherit');
+  jQuery('footer').css('position','inherit');
+});
+
+//homeNav
+jQuery(".home-text").click(function(){
+  jQuery('#myNav').addClass('show-nav');
+  jQuery('.burger-nav').css('display','none');
 });
 
 // take the sub menu out of the document flow

@@ -23,13 +23,16 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'whippsofacto' ); ?></a>
-
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) : ?>
+	<!-- Section only for front page ------->
+	<?php
+	 if (is_front_page()){?>
+	 <div id="video_home_full">
+		 <?php } ?> <!-- end of opening front-page div ---->
+	  <header id="masthead" class="site-header">
+			 <div class="site-branding">
+				<?php
+			  the_custom_logo();
+			  if ( is_front_page() && is_home() ) : ?>
 			  <div id="header_outter_container" class="header-outter-container"><div id="header_container" class="header-container"> <?the_post_thumbnail()?>  </div></div>
 				<div id="site_tite_and_description" class="site-title-and-description"><h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<!-- if on a "projects page" -->
@@ -131,5 +134,8 @@
 	 </div><!-- #end of mynav contianer -->
 	</div> <!-- #end of nav contianer -->
 	</header><!-- #masthead -->
-
+	<!-- Section only for front page ------->
+	<?php if (is_front_page()){ ?>
+	</div>
+	<?php } ?>
 	<div id="content" class="site-content">

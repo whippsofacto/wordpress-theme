@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Cinzel|Hammersmith+One|Julius+Sans+One');
 @import url('https://fonts.googleapis.com/css?family=Heebo:100|Just+Another+Hand|Poppins|Raleway:100');
+@import url('https://fonts.googleapis.com/css?family=Bungee+Hairline|Gidugu|Josefin+Slab|Playfair+Display|Yantramanav:700');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Bad+Script|Megrim|Roboto+Slab:100');
+
 $cinzel: 'Cinzel', serif;
 $hammer: 'Hammersmith One', sans-serif;
 $julius: 'Julius Sans One', sans-serif;
@@ -7,12 +10,35 @@ $hand: 'Just Another Hand', cursive;
 $popins: 'Poppins', sans-serif;
 $heebo: 'Heebo', sans-serif;
 $raleway: 'Raleway', sans-serif;
+$bungee: 'Bungee Hairline', cursive;
+$gidugu: 'Gidugu', sans-serif;
+$yant: 'Yantramanav', sans-serif;
+$josefin: 'Josefin Slab', serif;
+$playfair: 'Playfair Display', serif;
+$amantic: 'Amatic SC', cursive;
+$bad_script: 'Bad Script', cursive;
+$megrim: 'Megrim', cursive;
+$roboto: 'Roboto Slab', serif;
 
 .entry-header{
 font-family: $popins;
 color: #333;
 text-transform: uppercase;
 font-size: 1.7em;
+}
+
+#main > .entry-title{
+  font-family: $popins;
+  color: #333;
+  text-transform: uppercase;
+  font-size: 3.4em;
+}
+
+#projects_blurb{
+  font-family: $heebo;
+  color: #333;
+  font-size: 1.5em;
+
 }
 
 .site-title{

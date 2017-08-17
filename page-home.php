@@ -13,13 +13,13 @@
  */
 
 get_header(); ?>
-	<div id="primary" class="content-area box">
+	<div id="primary" class="content-area my-home-page">
 		<main id="main" class="site-main">
 
 			<?php
 			while ( have_posts() ) : the_post();
 
-				get_template_part( 'template-parts/content', 'page' );
+				get_template_part( 'template-parts/content', 'home' );
 
 				// If comments are open or we have at least one comment, load up the comment template.
 				if ( comments_open() || get_comments_number() ) :
@@ -35,3 +35,5 @@ get_header(); ?>
 <?php
 get_sidebar();
 get_footer();
+?>
+<?php
