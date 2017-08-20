@@ -33,11 +33,13 @@ jQuery("#closeIcon").click(function(){
   jQuery('.burger-nav').css('display','');
   jQuery('#content').css('position','inherit');
   jQuery('footer').css('position','inherit');
+  jQuery('#arrow_container').removeClass('hidden-arrow');
 });
 
 //homeNav
 jQuery(".home-text").click(function(){
   jQuery('#myNav').addClass('show-nav');
+  jQuery('#arrow_container').addClass('hidden-arrow');
   jQuery('.burger-nav').css('display','none');
 });
 
