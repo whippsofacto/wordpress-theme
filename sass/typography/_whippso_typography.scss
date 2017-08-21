@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Cinzel|Hammersmith+One|Julius+Sans+One');
-@import url('https://fonts.googleapis.com/css?family=Heebo:100|Just+Another+Hand|Poppins|Raleway:100');
+@import url('https://fonts.googleapis.com/css?family=Heebo:200|Just+Another+Hand|Poppins|Raleway:100');
 @import url('https://fonts.googleapis.com/css?family=Bungee+Hairline|Gidugu|Josefin+Slab|Playfair+Display|Yantramanav:700');
-@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Bad+Script|Megrim|Roboto+Slab:100');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Bad+Script|Megrim|Roboto+Slab');
 
 $cinzel: 'Cinzel', serif;
 $hammer: 'Hammersmith One', sans-serif;
@@ -86,10 +86,15 @@ p{
   font-size: 1.1em;
 }
 
-#myForm input, textarea, button {
+#myForm button {
  font-family: $raleway;
 }
 
+#myForm input, textarea{
+font-family: $heebo;
+font-weight: 200;
+font-size: 1.4em;
+}
 //seatch button
 .search-form input, button{
   font-family: $raleway;

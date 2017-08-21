@@ -85,7 +85,8 @@ function whippsofacto_setup() {
 	//3: Enable featured images
 	add_theme_support( 'post-thumbnails' );
 
-	
+	//4:
+
 	 /**
 	 * -----------------------------------------------------------------------//
 	 *         						end of my section
