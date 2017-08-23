@@ -504,6 +504,21 @@ p {
   font-size: 1.2em;
 }
 
+.site-info {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5em;
+}
+
+.site-info a {
+  text-decoration: none;
+  color: white;
+}
+
+.site-info a:visited {
+  text-decoration: none;
+  color: white;
+}
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -1294,29 +1309,44 @@ object {
 --------------------------------------------------------------*/
 body {
   width: 100%;
+  max-width: 2000px;
   margin: 0 auto;
   line-height: 1.6;
   font-family: arial;
 }
 
 .site-content {
-  border: 3px solid green;
   display: flex;
   flex-direction: row-reverse;
-  width: 95%;
+  width: 100%;
   margin: 0 auto;
 }
 
 .content-area {
-  border: 3px solid red;
-  width: auto;
   flex: 3;
   text-align: center;
 }
 
+.entry-content {
+  width: 95%;
+  margin: 0 auto;
+}
+
 .widget-area {
-  border: 3px solid blue;
   flex: 1;
+  margin-right: 1%;
+  left: 0;
+  position: relative;
+}
+
+.widget-area ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+.widget-area img {
+  height: 150px;
+  width: 150px;
 }
 
 .wp-custom-header iframe,
@@ -1331,24 +1361,33 @@ body {
 
 @media (max-width: 660px) and (min-width: 0px) {
   .site-content {
-    border: 3px solid green !important;
     display: flex;
     flex-direction: column-reverse;
-    width: 98%;
+    width: 100%;
     margin: 0 auto;
   }
 
   .content-area {
-    border: 3px solid red !important;
-    width: auto;
+    margin: 0 auto;
     flex: 1;
     text-align: center;
-    width: 100%;
+    width: 98%;
   }
 
   .widget-area {
-    border: 3px solid blue;
     flex: 1;
+    margin: 0px;
+    text-align: center;
+  }
+
+  .widget-area img {
+    height: 100px;
+    width: 100px;
+  }
+
+  .widget-area ul {
+    list-style-type: none;
+    padding-left: 0px;
   }
 }
 /*--------------------------------------------------------------*/
@@ -1689,6 +1728,84 @@ body {
     }
   }
 }
+/*--------------------------------------------
+# sidebar
+--------------------------------------------*/
+.widget-area ul a {
+  color: #474747;
+  text-decoration: none;
+}
+
+@media (max-width: 660px) and (min-width: 0px) {
+  #nav_span {
+    width: 50px;
+    margin: 0 auto;
+  }
+
+  #nav_span_inner {
+    margin: 0 auto;
+    cursor: pointer;
+  }
+
+  #nav_span #nav_span_inner span {
+    width: 100%;
+    height: 8px;
+    margin-top: 5px;
+    background-color: crimson;
+    display: block;
+    border-radius: 2px;
+    transition: .2s linear;
+  }
+
+  #nav_span #nav_span_inner p {
+    width: 100%;
+    height: 10px;
+    margin-top: 2px;
+    color: crimson;
+    display: block;
+    border-radius: 2px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: .2s linear;
+  }
+
+  #middle_span {
+    border-top: 5px;
+  }
+
+  .nav-transition-class {
+    transform: rotate(45deg) translate(5px, 0px);
+    transition: .2s linear;
+  }
+
+  .nav-transition-class-top {
+    transform: rotate(-45deg) translate(-10px, 13px);
+    transition: .2s linear;
+  }
+
+  .hidden-menu {
+    opacity: 0;
+    transition: .2s ease-in-out;
+  }
+}
+/*--------------------------------------------
+# footer
+--------------------------------------------*/
+.site-footer {
+  height: 300px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #DC2E57;
+  color: white;
+}
+
+.site-info {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 10%;
+}
+
 /*--------------------------------------------------------------
 # customHeader
 --------------------------------------------------------------*/

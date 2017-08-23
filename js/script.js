@@ -74,3 +74,12 @@ jQuery(document).bind("mouseup touchend",function(e)
 
 // remove type attribute
 jQuery('.search-field').removeAttr("type");
+
+//add a div around the sidebar after the menu and spans
+jQuery("#secondary").children('section').not(':first-child').wrapAll('<nav id="sidebar_nav_elements" class="sidebar-nav" />');
+
+jQuery("#nav_span_inner").click(function(){
+  jQuery('#top_span').toggleClass('nav-transition-class-top');
+  jQuery('#middle_span').toggleClass('nav-transition-class');
+  jQuery('#menu_span').toggleClass('hidden-menu');
+});

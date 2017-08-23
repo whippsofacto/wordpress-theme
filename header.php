@@ -45,6 +45,10 @@
 				<div id="header_outter_container" class="header-outter-container"><div id="header_container" class="header-container"> <?the_post_thumbnail()?>  </div></div>
 				<div id="site_tite_and_description" class="site-title-and-description"><h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 
+				<?php elseif (is_search() ) :?>
+					<?php the_custom_header_markup();?>
+					<div id="site_tite_and_description" class="site-title-and-description"><h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+
 			<?php else : ?>
 				<div id="header_thumb_container" class="header-thumb-container"> <?the_post_thumbnail()?>  </div>
 				<div id="site_tite_and_description" class="site-title-and-description"><h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>

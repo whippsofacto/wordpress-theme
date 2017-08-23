@@ -1,5 +1,6 @@
 body{
   width: 100%;
+  max-width: 2000px;
   margin: 0 auto;
   line-height: 1.6;
   font-family: arial;
@@ -7,24 +8,46 @@ body{
 
 
 .site-content{
-  border: 3px solid green;
+//  border: 3px solid green;
   display: flex;
   flex-direction: row-reverse;
-  width: 95%;
+  width: 100%;
   margin: 0 auto;
 }
 
 .content-area{
-border: 3px solid red;
-width: auto;
-flex: 3;
-text-align: center;
+ //border: 3px solid red;
+ flex: 3;
+ text-align: center;
+}
+
+.entry-content{
+  width: 95%;
+  margin:0 auto;
+
 }
 
 .widget-area{
-  border: 3px solid blue;
+//  border: 3px solid blue;
   flex: 1;
+  margin-right: 1%;
+  left:0;
+  position: relative;
 }
+
+
+  .widget-area ul{
+    list-style-type: none;
+    padding-left: 0px;
+  }
+
+
+.widget-area img{
+height: 150px;
+width: 150px;
+}
+
+
 
 
 .wp-custom-header iframe,
@@ -40,24 +63,37 @@ text-align: center;
 @media (max-width:660px) and (min-width:0px) {
 
   .site-content{
-    border: 3px solid green!important;
+    //border: 3px solid green!important;
     display: flex;
     flex-direction: column-reverse;
-    width: 98%;
+    width: 100%;
     margin: 0 auto;
   }
 
-  .content-area{
-  border: 3px solid red!important;
-  width: auto;
-  flex: 1;
-  text-align: center;
-  width:100%;
+   .content-area{
+    //border: 3px solid red!important;
+    margin: 0 auto;
+    flex: 1;
+    text-align: center;
+    width:98%;
   }
 
   .widget-area{
-    border: 3px solid blue;
+    //border: 3px solid blue;
     flex: 1;
+    margin: 0px;
+    text-align: center;
+  }
+
+   .widget-area img{
+    height: 100px;
+    width: 100px;
+  }
+
+
+  .widget-area ul{
+    list-style-type: none;
+    padding-left: 0px;
   }
 
 

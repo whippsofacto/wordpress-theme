@@ -1,0 +1,70 @@
+//sidebar nav
+  .widget-area ul a{
+    color: #474747;
+    text-decoration: none;
+  }
+
+
+
+
+
+
+  @media (max-width:660px) and (min-width:0px) {
+    //spans for nav icon
+    #nav_span{
+      width: 50px;
+      margin: 0 auto;
+    }
+
+    #nav_span_inner{
+      margin: 0 auto;
+      cursor: pointer;
+    }
+
+    #nav_span  #nav_span_inner span{
+      width: 100%;
+      height: 8px;
+      margin-top: 5px;
+      background-color: crimson;
+      display: block;
+      border-radius: 2px;
+      transition: .2s linear;
+    }
+    #nav_span  #nav_span_inner p{
+      width: 100%;
+      height: 10px;
+      margin-top: 2px;
+      color: crimson;
+      display: block;
+      border-radius: 2px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      transition: .2s linear;
+    }
+
+
+    #top_span{
+
+    }
+
+    #middle_span{
+      border-top: 5px;
+    }
+
+
+    .nav-transition-class{
+      transform: rotate(45deg) translate(5px,0px);
+      transition: .2s linear;
+    }
+
+    .nav-transition-class-top{
+      transform: rotate(-45deg) translate(-10px, 13px);
+      transition: .2s linear;
+    }
+
+    .hidden-menu{
+      opacity:0;
+      transition: .2s ease-in-out;
+    }
+
+  }
