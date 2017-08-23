@@ -1,10 +1,8 @@
+
+//Video on the home page only -full_screen ---------------------------------/
 #video_home_full > header > #my_player_container{
-  //must set these values to over-ride plugin
   top: 0;
   left: 0;
-  //width: 100%;
-  //height: 85vh;
-  // --------------- */
   background: #000;
   position: fixed;
   top: 0; right: 0; bottom: 0; left: 0;
@@ -36,22 +34,28 @@
 
 }
 
+// end of video section ------------------------------//
+
+//hide the site image on the home page
 #video_home_full > header > .site-branding{
   display: none;
 }
-
+//hide the site title on the home page
 #video_home_full > header > .entry-title{
   display: none;
 }
 
+//hide the page title on the homepage
  .my-home-page > #main > article > .entry-header{
   display: none;
 }
 
+//hide the burger nav on the home page
 #video_home_full > header > .burger-nav{
   display: none;
 }
 
+// name and title text -----------------------//
 .home-text{
   width: 100%;
   margin: 0 auto;
@@ -63,144 +67,174 @@
   cursor: pointer;
 }
 
-.home-text > p{
+.home-text > h1, .home-text > h2 {
   color: #4f4f4f;
   width: 60%;
   background-color: #fff;
   margin: 0 auto;
   font-size: 3em;
 }
-
-#arrow_container{
-
+//my name text
+#home_name{
+  font-family: $amantic;
+  font-size: 2em;
+  text-transform: uppercase;
+  color: #4f4f4f;
+  padding-left: 30px;
+  padding-bottom: 2px;
+  text-align: left;
 }
 
+//my title text
+#home_title{
+  font-family: $popins;
+  text-transform: uppercase;
+  text-align: left;
+  padding-left: 30px;
+}
 
+// animate the icon within the container
 #arrow_container > .fa{
   color: white;
   font-size: 39px;
   margin: 0 auto;
-  animation-name: example;
-  animation-duration: 1.5s;
+  animation-name: container;
+  animation-duration: 1.4s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   border: 1px transparent solid;
   border-radius: 50%;
   padding: 10px;
-  animation-delay: 10s;
+  animation-delay: 6s;
 }
 
-.hidden-arrow{
-  display: none;
-}
-
+// animate the movement of the container
 .arrow-container{
   width: 100%;
   margin-top: 130px;
   visibility: hidden;
   animation-name: moveArrow;
-  animation-duration: 1.5s;
+  animation-duration: 1.4s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-out;
-  animation-delay: 10s;
+  animation-delay: 6s;
 }
 
-@keyframes example {
-    0%   {background-color: crimson;}
+// animation for the arrow and arrow container
+@keyframes container {
+    0% {background-color: crimson;}
     3% {opacity: 1;}
-    98%{opacity: 0;}
-    100% {background-color: crimson;}
+    98%{opacity: 0; padding: 45px; font-size: 55px;}
 }
 
 @keyframes moveArrow{
   5%{opacity: 1;}
   6%{visibility:visible;}
   94%{opacity: 0;}
-  97%{visibility:hidden;}
-  100% {margin-top: -120px;}
+  97%{visibility:hidden; margin-top: -50px;}
+}
+// end of animation
+
+//toggled class with JS to remove the arrow after the nav has been activated
+.hidden-arrow{
+  display: none;
 }
 
- #home_name{
-   font-family: $amantic;
-   font-size: 2em;
-   text-transform: uppercase;
-   background-color: #4f4f4f;
-   color: #fff;
-   padding-left: 30px;
-   text-align: left;
- }
-
- #home_title{
-   font-family: $roboto;
-   text-transform: uppercase;
-   text-align: left;
-   padding-left: 30px;
- }
-
-
+// media query (medium sized screens)---------------------------------------//
 @media (max-width:910px) and (min-width:0px) {
-#video_home_full #masthead #my_player_container{
+
+     //video container
+     #video_home_full #masthead #my_player_container{
       //must set these values to over-ride plugin
       position: fixed;
       height: inherit;
       overflow: inherit;
       padding-bottom: 0px;
-    }
+      }
 
+     //shrink down the home page text
     .home-text{
       margin-top: -80px;
       margin-bottom: 200px;
       }
 
-    .home-text > p{
-      color: #4f4f4f;
-      width: 85%;
-      background-color: #fff;
-      margin: 0 auto;
-      font-size: 2em;
-    }
-    #arrow_container{
-      width: 100%;
-    }
+      //alter the dimensions of the headings
+      .home-text > h1, .home-text > h2 {
+       color: #4f4f4f;
+       width: 85%;
+       background-color: #fff;
+       margin: 0 auto;
+       font-size: 2em;
+     }
 
-    #arrow_container > .fa{
-      font-size: 34px;
-      padding: 8px;
-    }
-    @keyframes moveArrow{
-      0%{visibility:visible;}
-      80%{opacity: 0;}
-      100% {margin-top: -90px;}
-    }
+      #arrow_container{
+      width: 100%;
+      }
+
+      #arrow_container > .fa{
+        font-size: 34px;
+        padding: 8px;
+      }
+
+      @keyframes moveArrow{
+        5%{opacity: 1;}
+        6%{visibility:visible;}
+        94%{opacity: 0;}
+        97%{visibility:hidden; margin-top: -40px;}
+      }
 }
 
 @media (max-width:490px) and (min-width:0px) {
 
-  .home-text{
-    width: 95%;
-    margin: 0 auto;
-    padding-top: 75px;
-  }
+      #video_home_full > header > #my_player_container{
+        width: 350%; left: -71%;
+      }
 
-  #video_home_full > header > #my_player_container{
-    width: 350%; left: -71%;
-  }
+      .home-text{
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 75px;
+      }
 
-  .home-text > p{
-    color: #4f4f4f;
-    width: 100%;
-    background-color: #fff;
-    margin: 0 auto;
-    font-size: 1.3em;
- }
- #arrow_container > .fa{
-   font-size: 32px;
-   padding: 7px;
- }
- @keyframes moveArrow{
-    0%{visibility:visible;}
-      80%{opacity: 0;}
-   100% {margin-top: -80px;}
- }
+
+      .home-text > h1, .home-text > h2 {
+        color: #4f4f4f;
+        width: 100%;
+        background-color: #fff;
+     }
+
+      #home_name{
+        font-size: 1.5em;
+        text-align: center;
+        padding: 0;
+      }
+
+       #home_title{
+         font-size: 1.7em;
+         text-align: center;
+         padding: 0;
+       }
+
+       .arrow-container{
+         margin-top: 90px;
+       }
+
+      #arrow_container > .fa{
+        font-size: 25px;
+        padding: 7px;
+      }
+
+     @keyframes moveArrow{
+       5%{opacity: 1;}
+       6%{visibility:visible;}
+       94%{opacity: 0;}
+       97%{visibility:hidden; margin-top: -50px;}
+     }
+
+     @keyframes container {
+         0% {background-color: crimson;}
+         3% {opacity: 1;}
+         98%{opacity: 0; padding: 25px; font-size: 35px;}
+     }
 
 }

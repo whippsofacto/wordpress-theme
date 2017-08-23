@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Cinzel|Hammersmith+One|Julius+Sans+One');
-@import url('https://fonts.googleapis.com/css?family=Heebo:200|Just+Another+Hand|Poppins|Raleway:100');
+@import url('https://fonts.googleapis.com/css?family=Heebo:200|Just+Another+Hand|Poppins|Raleway');
 @import url('https://fonts.googleapis.com/css?family=Bungee+Hairline|Gidugu|Josefin+Slab|Playfair+Display|Yantramanav:700');
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC|Bad+Script|Megrim|Roboto+Slab');
+@import url('https://fonts.googleapis.com/css?family=Droid+Sans|Lato:300,400,700|Open+Sans:300,400,600i');
+@import url('https://fonts.googleapis.com/css?family=Heebo:300,400,500,700');
 
 $cinzel: 'Cinzel', serif;
 $hammer: 'Hammersmith One', sans-serif;
@@ -19,6 +21,10 @@ $amantic: 'Amatic SC', cursive;
 $bad_script: 'Bad Script', cursive;
 $megrim: 'Megrim', cursive;
 $roboto: 'Roboto Slab', serif;
+$open: 'Open Sans', sans-serif;
+$lato: 'Lato', sans-serif;
+$droid: 'Droid Sans', sans-serif;
+$heebo_light: 'Heebo', sans-serif;
 
 .entry-header{
 font-family: $popins;
@@ -68,36 +74,134 @@ p{
 
 //Nav Type ----------------------------//
 
-#primary-menu{
+#primary-menu li{
   font-family: $popins;
   font-size: 2em;
+  color: #fff;
 }
 
-#myNav nav ul li a{
+#primary-menu li a{
+  padding: 0px 5px 0px 5px;
+}
+
+#primary-menu li a:hover{
+background-color: crimson;
+}
+
+.sub-menu h2{
+  background-color: crimson;
+  color: white;
+  font-family: $heebo;
+  font-weight: 400;
+  padding-left: 5px;
+  min-width: 185px;
+  max-width: 185px;
+}
+
+.sub-menu li{
+  padding: 0px 5px 0px 5px;
+}
+
+.sub-menu li a{
   color: #4f4f4f;
+  font-weight: 100;
 }
 
-#myNav nav ul li a:hover{
-  color: #DB5870;
+.sub-menu li:hover{
+  background-color:crimson;
+  padding: 0px 5px 0px 5px;
 }
+.sub-menu li:hover > a{
+  color: #fff;
+}
+
 
 #myForm{
   font-family: $popins;
   font-size: 1.1em;
 }
 
-#myForm button {
- font-family: $raleway;
+#myForm h2{
+  font-family: $popins;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  color: #fff;
+  background-color: #4f4f4f;
+  padding: 0px 5px 0px 5px;
 }
 
-#myForm input, textarea{
+
+#myForm input,
+#myFrom textarea,
+#myFrom label{
+border: 1px solid #4f4f4f;
 font-family: $heebo;
 font-weight: 200;
-font-size: 1.4em;
+font-size: 1.2em;
 }
-//seatch button
-.search-form input, button{
-  font-family: $raleway;
+
+#myForm label{
+text-transform: uppercase;
+padding: 0 5px;
+color: #4f4f4f;
+
+}
+
+#myForm textarea{
+  resize: none;
+  color: #4f4f4f;
+  font-family: $heebo;
+  border: 1px solid #4f4f4f;
+}
+
+#submitFormButton{
+  text-transform: uppercase;
+  font-family: $popins;
+  font-size: 1em;
+}
+
+
+//search
+
+#search-container h4{
+  font-family: $popins;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  color: crimson;
+  background-color: #fff;
+  padding: 0px 5px 0px 5px;
+}
+
+.search-form > label > .search-field{
+  background-color: rgba(220,20,60,0.5);
+  color: white;
+  font-family: $heebo;
+  font-weight: 100;
+  font-size: 1.6em;
+  padding-left: 5px;
+  padding-top: 10px;
+  border: 0px;
+}
+
+.search-form > label > .search-field::placeholder{
+  color: white;
+  font-family: $heebo;
+  font-weight: 100;
+  font-size: 1.6em;
+  padding-left: 5px;
+  border: 0px;
+}
+
+.search-form > label > .search-field:focus{
+  outline: none;
+}
+
+.search-form > input[type=submit]{
+  text-transform: uppercase;
+  font-family: $popins;
+  font-size: 1em;
+  background-color: white;
+  color: crimson;
 }
 
 .sub-menu{

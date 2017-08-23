@@ -44,9 +44,7 @@ jQuery(".home-text").click(function(){
 });
 
 // take the sub menu out of the document flow
-jQuery('.sub-menu').append('<hr />');
 jQuery('.sub-menu').prepend('<h2> Projects </h2>');
-jQuery('.sub-menu').prepend('<hr />');
 
 
 var element = jQuery('.sub-menu').detach();
@@ -55,11 +53,22 @@ jQuery('.menu-nav-container').append(element);
 
 //searchBarToggle
 jQuery('#searchNav').click(function(){
-  jQuery('#search-container').toggleClass('show-search');
+  jQuery('#nav_search').addClass('search-full');
 });
 //fs searchBarToggle
 jQuery('#fs_searchNav').click(function(){
-  jQuery('#search-container').toggleClass('show-search');
+  jQuery('#nav_search').addClass('search-full');
 });
-//search Bar two lines
-jQuery('.search-submit').before("<br />","<br />");
+//on mouse up remove the search-full class and close the search nav
+jQuery(document).bind("mouseup touchend",function(e)
+              {
+                  var container = jQuery("#search-container");
+                  // if the target of the click isn't the container nor a descendant of the container
+                  if (!container.is(e.target) && container.has(e.target).length === 0)
+                  {
+                    jQuery('#nav_search').removeClass('search-full');
+                  }
+                });
+
+// remove type attribute
+jQuery('.search-field').removeAttr("type");

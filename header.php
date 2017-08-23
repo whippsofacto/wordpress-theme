@@ -52,19 +52,24 @@
 			endif;
 
 			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo "$description" /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
-		</div><!-- site_tite_and_description -->
-		</div><!-- .site-branding -->
+			 if ( $description || is_customize_preview() ) : ?>
+			 	<p class="site-description"><?php echo "$description" /* WPCS: xss ok. */ ?></p>
+			  <?php
+			  endif; ?>
+	  	  </div><!-- site_tite_and_description -->
+	  	</div><!-- .site-branding -->
+
+	<?php if (is_front_page()){?>
+  <!-- beginning of the rather long and complicated navigation -->
 	<div class="burger-nav">
-	  <b>|</b><b>|</b><b>|</b>
+		<span></span>
+		<span></span>
+		<span></span>
 	</div>
-	<div id="myNav" class="overlay">
-	 <div id='myNav_container'>
-		 <div id="leftElements">
-		<nav id="site-navigation" class="main-navigation overlay-content">
+  	<div id="myNav" class="overlay">
+	   <div id='myNav_container'>
+		  <div id="leftElements">
+	   	<nav id="site-navigation" class="main-navigation overlay-content">
 			<!--<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php//esc_html_e( 'Primary Menu', 'whippsofacto' ); ?></button>-->
 			<?php
 				wp_nav_menu( array(
@@ -78,24 +83,24 @@
 		<div id="nav_contact_form" class="overlay-content">
 			<form id="myForm" action="#" method="post">
 				<h2> Get In Touch </h2>
-				<input class="formFlex" type="text" id="fname" name="firstname" placeholder="Name">
+				<label> Name </label>
+				<input class="formFlex" type="text" id="fname" name="firstname">
 				<br>
-				<input class="formFlex" type="text" id="email" name="email" placeholder="Email">
+				<label> Email </label>
+				<input class="formFlex" type="text" id="email" name="email">
 				<br>
-				<input class="formFlex" type="text" id="subject" name="subject" placeholder="Subject">
+				<label> Subject </label>
+				<input class="formFlex" type="text" id="subject" name="subject">
 			  <br>
-	      <textarea class="formFlex" id="message" name="message" placeholder="Message"></textarea>
+				<label> Message </label>
+	      <textarea class="formFlex" id="message" name="message"></textarea>
 				<br>
 				<button id="submitFormButton" class="formFlex" type="submit" value="Submit">Submit</button>
 			</form>
 		</div>
-		<div id="nav_social_search" class="overlay-content">
-			<div id='search-container' class='search-overlay'>
-			 <?php get_search_form(); ?>
-		</div> <!--seatch overlay -->
 				<hr class='socialHr'>
 			 <div id="social_nav_container">
-				<div class="social-nav-inner-container">
+				<div class="mids social-nav-inner-container">
 		 	  	 <i id="searchNav" class="fa fa-search" aria-hidden="true"></i>
 			  </div>
 			  <div class="mids social-nav-inner-container">
@@ -103,14 +108,18 @@
 			   	 <i class="fa fa-github" aria-hidden="true"></i>
 				  </a>
 			  </div>
-			  <div class="social-nav-inner-container">
+			  <div class="mids social-nav-inner-container">
 					<a href="https://www.twitter.com/whippsofacto">
 				  	<i class="fa fa-twitter" aria-hidden="true"></i>
 				 </a>
 				</div>
+				<div class="social-nav-inner-container">
+					<a href="https://www.twitter.com/whippsofacto">
+						<i class="fa fa-envelope-o" aria-hidden="true"></i>
+				 </a>
+				</div>
 			</div><!-- Social Nav Container -->
 			<hr class="socialHr">
-		 </div> <!--social search section -->
 				<div id="fs_social_nav_container">
 					<div class="fs-social-nav-inner-container">
 							<i id="closeIcon" class=" fa fa-times-circle-o" aria-hidden="true"></i>
@@ -129,12 +138,24 @@
 					</a>
 				 </div>
 			 </div><!-- FS Social Nav Container -->
-			</div> <!--social search section -->
+		 </div>
+		 <div id="nav_search" class="search-overlay">
+			 <div id='search-container' class='search-overlay-content'>
+				<?php get_search_form(); ?>
+		 </div> <!--search overlay content -->
+	  </div> <!--search overlay -->
 	  </div> <!-- #end of Right Elements -->
 	 </div><!-- #end of mynav contianer -->
 	</div> <!-- #end of nav contianer -->
 	</header><!-- #masthead -->
+	<?php } else { ?>
+
+	<!--place nav for all other pages in here ------>
+
+	<?php } ?>
+
 	<!-- Section only for front page ------->
+	<!-- close the header div ------->
 	<?php if (is_front_page()){ ?>
 	</div>
 	<?php } ?>
