@@ -1,9 +1,10 @@
 console.log("Hello World!");
 
 
+var header_container = jQuery('#header_container') > jQuery('img');
 jQuery('#header_container') > jQuery('img').hover(
-       function(){ jQuery(this).addClass('hover').removeClass('off-hover'); },
-       function(){ jQuery(this).removeClass('hover').addClass('off-hover'); }
+       function(){ jQuery(header_container).addClass('hover').removeClass('off-hover'); },
+       function(){ jQuery(header_container).removeClass('hover').addClass('off-hover'); }
 );
 
 jQuery(window).scroll(function(){
@@ -12,6 +13,9 @@ jQuery(window).scroll(function(){
 
   });
 
+
+
+/* web vr page title */
 jQuery( "h1:contains('The Island – Web VR')" )
       .css( "color", "#FC8D29")
       .css("background","linear-gradient(180deg, #FC8D29, #A811F0)")
