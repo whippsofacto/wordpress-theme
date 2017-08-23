@@ -391,7 +391,7 @@ p {
 }
 
 .sub-menu h2 {
-  background-color: crimson;
+  background-color: #DC2E57;
   color: white;
   font-family: "Heebo", sans-serif;
   font-weight: 400;
@@ -410,7 +410,7 @@ p {
 }
 
 .sub-menu li:hover {
-  background-color: crimson;
+  background-color: #DC2E57;
   padding: 0px 5px 0px 5px;
 }
 
@@ -852,7 +852,7 @@ a:hover, a:active {
 }
 
 #submitFormButton:hover {
-  background-color: crimson;
+  background-color: #DC2E57;
 }
 
 #myForm #message {
@@ -936,7 +936,7 @@ a:hover, a:active {
 }
 
 .fa-times-circle-o::before {
-  color: crimson;
+  color: #DC2E57;
   font-size: 60px;
   font-weight: lighter;
   cursor: pointer;
