@@ -1300,12 +1300,15 @@ body {
 }
 
 .site-content {
+  border: 3px solid green;
   display: flex;
-  width: 85%;
+  flex-direction: row-reverse;
+  width: 95%;
   margin: 0 auto;
 }
 
 .content-area {
+  border: 3px solid red;
   width: auto;
   flex: 3;
   text-align: center;
@@ -1314,12 +1317,6 @@ body {
 .widget-area {
   border: 3px solid blue;
   flex: 1;
-}
-
-.box {
-  margin: 5px;
-  padding: 10px;
-  width: 100%;
 }
 
 .wp-custom-header iframe,
@@ -1332,6 +1329,28 @@ body {
   height: 80vh;
 }
 
+@media (max-width: 660px) and (min-width: 0px) {
+  .site-content {
+    border: 3px solid green !important;
+    display: flex;
+    flex-direction: column-reverse;
+    width: 98%;
+    margin: 0 auto;
+  }
+
+  .content-area {
+    border: 3px solid red !important;
+    width: auto;
+    flex: 1;
+    text-align: center;
+    width: 100%;
+  }
+
+  .widget-area {
+    border: 3px solid blue;
+    flex: 1;
+  }
+}
 /*--------------------------------------------------------------*/
 /*--------------------------------------------
 # post Styles
@@ -1620,16 +1639,16 @@ body {
   }
 
   #home_name {
-    font-size: 1.5em;
+    font-size: 1.7em;
     text-align: center;
     padding: 0;
   }
 
   #home_title {
-    font-size: 1.7em;
+    font-size: 1.9em;
     text-align: center;
     padding: 0;
-    letter-spacing: -1.2px;
+    letter-spacing: -1.4px;
   }
 
   .arrow-container {
