@@ -1,10 +1,10 @@
 console.log("Hello World!");
 
 
-var header_container = jQuery('#header_container') > jQuery('img');
-jQuery('#header_container') > jQuery('img').hover(
-       function(){ jQuery(header_container).addClass('hover').removeClass('off-hover'); },
-       function(){ jQuery(header_container).removeClass('hover').addClass('off-hover'); }
+//projects images behaviours
+jQuery('#header_container > img').hover(
+       function(){ jQuery('#header_container > img').addClass('hover').removeClass('off-hover'); },
+       function(){ jQuery('#header_container > img').removeClass('hover').addClass('off-hover'); }
 );
 
 jQuery(window).scroll(function(){
@@ -12,8 +12,6 @@ jQuery(window).scroll(function(){
     jQuery("#header_container").css("transition", "ease-in-out opacity 5s;" - jQuery(window).scrollTop() / 130);
 
   });
-
-
 
 /* web vr page title */
 jQuery( "h1:contains('The Island – Web VR')" )
