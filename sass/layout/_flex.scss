@@ -10,9 +10,10 @@ body{
 .site-content{
 //  border: 3px solid green;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column-reverse;
   width: 100%;
   margin: 0 auto;
+  margin-top: -15px;
 }
 
 .content-area{
@@ -30,22 +31,162 @@ body{
 .widget-area{
 //  border: 3px solid blue;
   flex: 1;
-  margin-right: 1%;
-  left:0;
-  position: relative;
+  margin:0 auto;
 }
 
 
-  .widget-area ul{
-    list-style-type: none;
-    padding-left: 0px;
-  }
-
-
-.widget-area img{
-height: 150px;
-width: 150px;
+.widget-area ul{
+  list-style-type: none;
+  padding-left: 0px;
 }
+
+// Every page nav ----------------------------------------------------->
+
+#secondary{
+width: 100%;
+}
+
+#sidebar_nav_elements{
+  display: flex;
+}
+
+#sidebar_nav_elements section:first-child{
+//border:1px solid crimson;
+max-width:400px;
+flex:1;
+}
+
+//title and main links --------------------------------------------------//
+#sidebar_nav_elements section:first-child ul{
+  display: flex;
+  margin-top: 6px;
+  margin-left:15px;
+}
+
+#sidebar_nav_elements section:first-child ul li{
+  flex: 1;
+  text-align: left;
+  font-family: $popins;
+  font-size: 2em;
+}
+
+#sidebar_nav_elements section:first-child ul li a{
+ color: white;
+ background-color: #4f4f4f;
+ border: 1px solid  #4f4f4f;
+ padding: 0px 10px 0px 10px;
+ margin-right: 5px;
+ transition: 0.3s;
+}
+
+#sidebar_nav_elements section:first-child ul li a:hover{
+ background-color: #FFF;
+ color: #4f4f4f;
+}
+
+//projects links ----------------------------------------------------//
+#sidebar_nav_elements section:nth-child(2){
+//border:1px solid aqua;
+flex:1.9;
+display: -webkit-flex;
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+margin-right: 5px;
+}
+
+#sidebar_nav_elements section:nth-child(2) h2{
+  font-family: $popins;
+  font-size: 1.77em;
+  text-transform: uppercase;
+  background-color: #DC2E57;
+  color:white;
+  margin-top: 8px;
+  margin-bottom: -8px;
+  padding: 0px 5px 0px 5px;
+  max-width: 145px;
+  cursor: pointer;
+  border: #DC2E57 1px solid;
+}
+
+#sidebar_nav_elements section:nth-child(2) h2:hover{
+  background-color: white;
+  color: #DC2E57;
+  transition: 0.5s ease-in;
+}
+
+
+#sidebar_nav_elements section:nth-child(2) ul li a{
+}
+
+.menu-projects-container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  height: 0;
+  background: transparent;
+  overflow-y: hidden;
+  transition:0.4s;
+}
+
+.show-section{
+  height: 100% !important;
+  transition:0.4s!important;
+
+}
+
+
+
+//posts links -------------------------------------------//
+#sidebar_nav_elements section:nth-child(3){
+//border:1px solid royalblue;
+flex:0.1;
+display: -webkit-flex;
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+text-align: right;
+}
+
+#sidebar_nav_elements section:nth-child(3) h2{
+  font-family: $popins;
+  font-size: 1.77em;
+  text-transform: uppercase;
+  background-color: #DC2E57;
+  color:white;
+  margin-top: 8px;
+  margin-right: 15px;
+  padding: 0px 5px 0px 5px;
+  max-width: 145px;
+  cursor: pointer;
+  margin-bottom: -8px;
+  border: #DC2E57 1px solid;
+}
+
+#sidebar_nav_elements section:nth-child(3) h2:hover{
+  background-color: white;
+  color: #DC2E57;
+  transition: 0.5s ease-in;
+}
+
+#sidebar_nav_elements section:nth-child(3) ul{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  height: 0;
+  background: transparent;
+  overflow-y: hidden;
+  transition:0.4s;
+  margin-right: 10px;
+}
+
+
+
+
+//---end of every page nav --------------------------------------------//
+
 
 
 
