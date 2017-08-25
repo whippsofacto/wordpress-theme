@@ -65,12 +65,30 @@ jQuery('#fs_searchNav').click(function(){
 jQuery(document).bind("mouseup touchend",function(e)
               {
                   var container = jQuery("#search-container");
+                  var projects = jQuery('#sidebar_nav_elements > section:nth-child(2) h2');
+                  var projectsDiv = jQuery('#sidebar_nav_elements > section:nth-child(2) > div');
+                  var posts = jQuery('#sidebar_nav_elements > section:nth-child(3) h2');
+                  var postsUl = jQuery('#sidebar_nav_elements > section:nth-child(3) > ul');
+
                   // if the target of the click isn't the container nor a descendant of the container
                   if (!container.is(e.target) && container.has(e.target).length === 0)
                   {
                     jQuery('#nav_search').removeClass('search-full');
                   }
-                });
+
+                  // apply the same script to the projects drop down
+                  if (!projects.is(e.target) && container.has(e.target).length === 0)
+                  {
+                    jQuery(projectsDiv).removeClass('show-section');
+                  }
+
+                  // apply the same script to the posts drop down
+                  if (!posts.is(e.target) && container.has(e.target).length === 0)
+                  {
+                    jQuery(postsUl).removeClass('show-section');
+                  }
+
+      });
 
 // remove type attribute
 jQuery('.search-field').removeAttr("type");
@@ -79,9 +97,13 @@ jQuery('.search-field').removeAttr("type");
 jQuery("#secondary").children('section').not(':first-child').wrapAll('<nav id="sidebar_nav_elements" class="sidebar-nav" />');
 
 jQuery("#nav_span_inner").click(function(){
+  // how click affects the hamburger
+  jQuery('#nav_span').toggleClass('span-rotate');
   jQuery('#top_span').toggleClass('nav-transition-class-top');
   jQuery('#middle_span').toggleClass('nav-transition-class');
   jQuery('#menu_span').toggleClass('hidden-menu');
+  // how click affects the menu items
+  jQuery('#sidebar_nav_elements').toggleClass('display-nav');
 });
 
 
@@ -98,21 +120,3 @@ jQuery(projectLinks).click(function(){
 jQuery(postLinks).click(function(){
   jQuery('#sidebar_nav_elements > section:nth-child(3) > ul').toggleClass('show-section');
 });
-
-/*
-jQuery(window).scroll(function(e){
-  var el = jQuery('#secondary');
-  var isPositionFixed = (el.css('position') == 'fixed');
-  if (jQuery(window).scrollTop() > jQuery(window).height() * 0.5 && !isPositionFixed){
-    jQuery('#secondary').css({'position': 'fixed',
-                              'top': '0px',
-                              'background-color':'rgba(255,255,255,.4)',
-                              'margin-top': '-10px',
-                              'margin-bottom': '0px'});
-  }
-  if (jQuery(window).scrollTop() < jQuery(window).height() * 0.5 && isPositionFixed)
-  {
-    jQuery('#secondary').css({'position': 'static', 'top': '0px','background-color':'#fff'});
-  }
-});
-*/

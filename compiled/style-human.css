@@ -1320,7 +1320,6 @@ body {
   flex-direction: column-reverse;
   width: 100%;
   margin: 0 auto;
-  margin-top: -15px;
 }
 
 .content-area {
@@ -1341,133 +1340,6 @@ body {
 .widget-area ul {
   list-style-type: none;
   padding-left: 0px;
-}
-
-#secondary {
-  width: 100%;
-}
-
-#sidebar_nav_elements {
-  display: flex;
-}
-
-#sidebar_nav_elements section:first-child {
-  max-width: 400px;
-  flex: 1;
-}
-
-#sidebar_nav_elements section:first-child ul {
-  display: flex;
-  margin-top: 6px;
-  margin-left: 15px;
-}
-
-#sidebar_nav_elements section:first-child ul li {
-  flex: 1;
-  text-align: left;
-  font-family: "Poppins", sans-serif;
-  font-size: 2em;
-}
-
-#sidebar_nav_elements section:first-child ul li a {
-  color: white;
-  background-color: #4f4f4f;
-  border: 1px solid  #4f4f4f;
-  padding: 0px 10px 0px 10px;
-  margin-right: 5px;
-  transition: 0.3s;
-}
-
-#sidebar_nav_elements section:first-child ul li a:hover {
-  background-color: #FFF;
-  color: #4f4f4f;
-}
-
-#sidebar_nav_elements section:nth-child(2) {
-  flex: 1.9;
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  margin-right: 5px;
-}
-
-#sidebar_nav_elements section:nth-child(2) h2 {
-  font-family: "Poppins", sans-serif;
-  font-size: 1.77em;
-  text-transform: uppercase;
-  background-color: #DC2E57;
-  color: white;
-  margin-top: 8px;
-  margin-bottom: -8px;
-  padding: 0px 5px 0px 5px;
-  max-width: 145px;
-  cursor: pointer;
-  border: #DC2E57 1px solid;
-}
-
-#sidebar_nav_elements section:nth-child(2) h2:hover {
-  background-color: white;
-  color: #DC2E57;
-  transition: 0.5s ease-in;
-}
-
-.menu-projects-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  text-align: right;
-  height: 0;
-  background: transparent;
-  overflow-y: hidden;
-  transition: 0.4s;
-}
-
-.show-section {
-  height: 100% !important;
-  transition: 0.4s !important;
-}
-
-#sidebar_nav_elements section:nth-child(3) {
-  flex: 0.1;
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  text-align: right;
-}
-
-#sidebar_nav_elements section:nth-child(3) h2 {
-  font-family: "Poppins", sans-serif;
-  font-size: 1.77em;
-  text-transform: uppercase;
-  background-color: #DC2E57;
-  color: white;
-  margin-top: 8px;
-  margin-right: 15px;
-  padding: 0px 5px 0px 5px;
-  max-width: 145px;
-  cursor: pointer;
-  margin-bottom: -8px;
-  border: #DC2E57 1px solid;
-}
-
-#sidebar_nav_elements section:nth-child(3) h2:hover {
-  background-color: white;
-  color: #DC2E57;
-  transition: 0.5s ease-in;
-}
-
-#sidebar_nav_elements section:nth-child(3) ul {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  text-align: right;
-  height: 0;
-  background: transparent;
-  overflow-y: hidden;
-  transition: 0.4s;
-  margin-right: 10px;
 }
 
 .wp-custom-header iframe,
@@ -1861,7 +1733,139 @@ body {
   display: none;
 }
 
-@media (max-width: 660px) and (min-width: 0px) {
+#secondary {
+  width: 100%;
+  margin-top: -15px;
+}
+
+#sidebar_nav_elements {
+  display: flex;
+}
+
+#sidebar_nav_elements section:first-child {
+  max-width: 400px;
+  flex: 1;
+}
+
+#sidebar_nav_elements section:first-child ul {
+  display: flex;
+  margin-top: 6px;
+  margin-left: 15px;
+}
+
+#sidebar_nav_elements section:first-child ul li {
+  flex: 1;
+  text-align: left;
+  font-family: "Poppins", sans-serif;
+  font-size: 2em;
+}
+
+#sidebar_nav_elements section:first-child ul li a {
+  color: white;
+  background-color: #4f4f4f;
+  border: 1px solid  #4f4f4f;
+  padding: 0px 10px 0px 10px;
+  margin-right: 5px;
+  transition: 0.3s;
+}
+
+#sidebar_nav_elements section:first-child ul li a:hover {
+  background-color: #FFF;
+  color: #4f4f4f;
+}
+
+#sidebar_nav_elements section:nth-child(2) {
+  flex: 1.9;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 5px;
+}
+
+#sidebar_nav_elements section:nth-child(2) h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.77em;
+  text-transform: uppercase;
+  background-color: #DC2E57;
+  color: white;
+  margin-top: 8px;
+  margin-bottom: -8px;
+  padding: 0px 5px 0px 5px;
+  max-width: 165px;
+  cursor: pointer;
+  border: #DC2E57 1px solid;
+}
+
+#sidebar_nav_elements section:nth-child(2) h2:hover {
+  background-color: white;
+  color: #DC2E57;
+  transition: 0.5s ease-in;
+}
+
+.menu-projects-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  height: 0;
+  background: transparent;
+  overflow-y: hidden;
+  transition: 0.4s;
+}
+
+.show-section {
+  height: 150px !important;
+  transition: 0.4s;
+}
+
+#sidebar_nav_elements section:nth-child(3) {
+  flex: 0.1;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+#sidebar_nav_elements section:nth-child(3) h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.77em;
+  text-transform: uppercase;
+  background-color: #DC2E57;
+  color: white;
+  margin-top: 8px;
+  margin-right: 15px;
+  padding: 0px 5px 0px 5px;
+  max-width: 145px;
+  cursor: pointer;
+  margin-bottom: -8px;
+  border: #DC2E57 1px solid;
+}
+
+#sidebar_nav_elements section:nth-child(3) h2:hover {
+  background-color: white;
+  color: #DC2E57;
+  transition: 0.5s ease-in;
+}
+
+#sidebar_nav_elements section:nth-child(3) ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  height: 0;
+  background: transparent;
+  overflow-y: hidden;
+  transition: 0.4s;
+  margin-right: 15px;
+}
+
+@media (max-width: 695px) and (min-width: 0px) {
+  .site-content {
+    margin-top: 5px;
+  }
+
   #nav_span {
     width: 50px;
     margin: 0 auto;
@@ -1876,7 +1880,7 @@ body {
     width: 100%;
     height: 8px;
     margin-top: 5px;
-    background-color: crimson;
+    background-color: #4f4f4f;
     display: block;
     border-radius: 2px;
     transition: .2s linear;
@@ -1886,7 +1890,7 @@ body {
     width: 100%;
     height: 10px;
     margin-top: 2px;
-    color: crimson;
+    color: #4f4f4f;
     display: block;
     border-radius: 2px;
     font-weight: bold;
@@ -1898,19 +1902,111 @@ body {
     border-top: 5px;
   }
 
+  .span-rotate {
+    transform: rotate(-1.5deg);
+    transition: .2s;
+  }
+
   .nav-transition-class {
     transform: rotate(45deg) translate(5px, 0px);
     transition: .2s linear;
+    background-color: #DC2E57 !important;
   }
 
   .nav-transition-class-top {
     transform: rotate(-45deg) translate(-10px, 13px);
     transition: .2s linear;
+    background-color: #DC2E57 !important;
+  }
+
+  .site-content {
+    margin-top: 0px;
+  }
+
+  #secondary {
+    padding-top: 12px;
+    margin-top: 0px;
+    border-bottom: 1px solid #4f4f4f;
+    border-top: 1px solid #4f4f4f;
   }
 
   .hidden-menu {
     opacity: 0;
     transition: .2s ease-in-out;
+  }
+
+  #sidebar_nav_elements {
+    display: none;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 45px;
+  }
+
+  #sidebar_nav_elements section:first-child div ul {
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0px;
+  }
+
+  #sidebar_nav_elements section:first-child ul {
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  #sidebar_nav_elements section:nth-child(2) {
+    margin-top: -30px;
+    display: block;
+  }
+
+  #sidebar_nav_elements section:nth-child(2) h2 {
+    text-align: center !important;
+  }
+
+  #sidebar_nav_elements section:nth-child(2) div {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+  }
+
+  #sidebar_nav_elements section:nth-child(2) div ul li {
+    margin-bottom: 2px;
+    border-bottom: #4f4f4f 1px solid;
+    text-align: center;
+  }
+
+  #sidebar_nav_elements section:nth-child(2) div ul li a {
+    color: #4f4f4f;
+  }
+
+  #sidebar_nav_elements section:nth-child(3) {
+    margin-top: -19px;
+  }
+
+  #sidebar_nav_elements section:nth-child(3) h2 {
+    margin-right: 0px;
+    padding: 0px 5px 0px 5px;
+  }
+
+  #sidebar_nav_elements section:nth-child(3) ul {
+    margin-right: 0px;
+    text-align: center;
+    display: unset;
+  }
+
+  #sidebar_nav_elements section:nth-child(3) ul li {
+    margin-bottom: 2px;
+    border-bottom: #4f4f4f 1px solid;
+  }
+
+  #sidebar_nav_elements section:nth-child(3) ul li a {
+    color: #4f4f4f;
+  }
+
+  .display-nav {
+    display: flex !important;
   }
 }
 /*--------------------------------------------
