@@ -482,7 +482,8 @@ p {
   color: white;
   font-family: "Heebo", sans-serif;
   font-weight: 100;
-  font-size: 1.6em;
+  font-size: 1.2em;
+  height: 100%;
   padding-left: 5px;
   border: 0px;
 }
@@ -1735,7 +1736,6 @@ body {
 
 #secondary {
   width: 100%;
-  margin-top: -15px;
 }
 
 #sidebar_nav_elements {
@@ -2081,6 +2081,78 @@ body {
   max-height: 250px;
 }
 
+#header_image div img {
+  width: 100%;
+  height: auto;
+}
+
+#page_header_container {
+  margin-bottom: -7px;
+}
+
+#site_tite_and_description {
+  position: absolute;
+  top: 0;
+  margin-top: 15%;
+  margin-left: 15%;
+}
+
+#site_tite_and_description h1 {
+  position: relative;
+  background-color: white;
+  margin-bottom: 0;
+  text-align: left;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+#site_tite_and_description h1 a {
+  color: #4f4f4f;
+  font-family: "Amatic SC", cursive;
+  font-size: 50px;
+}
+
+#site_tite_and_description p {
+  position: relative;
+  margin-top: 0;
+  background-color: white;
+  color: #4f4f4f;
+  padding-left: 25px;
+  font-size: 30px;
+  text-align: left;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 0px;
+}
+
+#post_arrow {
+  text-align: center;
+}
+
+#post_arrow .fa-arrow-circle-down {
+  font-size: 45px;
+  margin-right: 0 auto;
+  margin-left: 0 auto;
+  margin-top: 25px;
+  color: rgba(255, 255, 255, 0.1);
+  transition: 1s;
+  cursor: pointer;
+  animation-name: enter;
+  animation-duration: 1.8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+  animation-delay: 1s;
+}
+
+#post_arrow .fa-arrow-circle-down:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+@keyframes enter {
+  98% {
+    color: rgba(255, 255, 255, 0.9);
+  }
+}
 @media (max-width: 910px) and (min-width: 0px) {
   .header-outter-container {
     top: 13%;

@@ -46,22 +46,43 @@
 				<div id="site_tite_and_description" class="site-title-and-description"><h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 
 				<?php elseif (is_search() ) :?>
-					<?php the_custom_header_markup();?>
+					<div id='page_header_container'>
+					 <div id='header_image'> <?php the_custom_header_markup();?></div>
 					<div id="site_tite_and_description" class="site-title-and-description"><h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+						<?php	$description = get_bloginfo( 'description', 'display' );
+							 if ( $description || is_customize_preview() ) : ?>
+								<p class="site-description"><?php echo "$description" /* WPCS: xss ok. */ ?></p>
+								<?php
+							endif;?>
+							<div id="post_title">
+								<?php the_title( '<p> [', ']</p>' ); ?>
+							</div>
+							<div id='post_arrow'>
+								<a href='#secondary'><i class="fa fa-arrow-circle-down" aria-hidden="true"></i></a>
+							</div>
+					</div>
 
 			<?php else : ?>
-				<div id="header_thumb_container" class="header-thumb-container"> <?the_post_thumbnail()?>  </div>
-				<div id="site_tite_and_description" class="site-title-and-description"><h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<div id='page_header_container'>
+         <div id='header_image'> <?php the_custom_header_markup();?></div>
+				 <div id="site_tite_and_description" class="site-title-and-description"><h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					 <?php	$description = get_bloginfo( 'description', 'display' );
+							if ( $description || is_customize_preview() ) : ?>
+							 <p class="site-description"><?php echo "$description" /* WPCS: xss ok. */ ?></p>
+							 <?php
+						 endif;?>
+					<div id="post_title">
+						<?php the_title( '<p> [', ']</p>' ); ?>
+					</div>
+					<ul id='post_arrow'>
+						<li><a href='#secondary'><i class="fa fa-arrow-circle-down" aria-hidden="true"></i></a></li>
+					</ul>
+				</div>
 			<?php
 			endif;
-
-			$description = get_bloginfo( 'description', 'display' );
-			 if ( $description || is_customize_preview() ) : ?>
-			 	<p class="site-description"><?php echo "$description" /* WPCS: xss ok. */ ?></p>
-			  <?php
-			  endif; ?>
-	  	  </div><!-- site_tite_and_description -->
-	  	</div><!-- .site-branding -->
+	 	?>
+	 </div><!-- site_tite_and_description -->
+</div><!-- .site-branding -->
 
 	<?php if (is_front_page()){?>
   <!-- beginning of the rather long and complicated navigation -->
@@ -153,11 +174,8 @@
 	</div> <!-- #end of nav contianer -->
 	</header><!-- #masthead -->
 	<?php } else { ?>
-
 	<!--place nav for all other pages in here ------>
-
 	<?php } ?>
-
 	<!-- Section only for front page ------->
 	<!-- close the header div ------->
 	<?php if (is_front_page()){ ?>

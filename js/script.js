@@ -120,3 +120,15 @@ jQuery(projectLinks).click(function(){
 jQuery(postLinks).click(function(){
   jQuery('#sidebar_nav_elements > section:nth-child(3) > ul').toggleClass('show-section');
 });
+
+// single page scroller
+
+		jQuery(document).ready(function() {
+			jQuery('#post_arrow').onePageNav({
+      changeHash: false,
+      scrollSpeed: 1000,
+      scrollThreshold: 0.5,
+      filter: '',
+      easing: 'swing'
+    });
+	});

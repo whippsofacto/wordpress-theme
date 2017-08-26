@@ -76,7 +76,7 @@ function whippsofacto_setup() {
 	* 3. include Featured Images
 	*/
 
-	//1: Activate Video Header
+	//1: Activate Video and Graphic Header
 	include 'includes/_video-header.php';
 
 	//2: Add my post-type
@@ -149,10 +149,17 @@ function whippsofacto_scripts() {
 	wp_enqueue_script( 'whippsofacto-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	/* Enqueue my own minfied javascript files*/
+	// scroller
+	wp_enqueue_script('nav-scroller', get_template_directory_uri() . '/js/jquery.nav.js', array(), '20151215', true );
+
+	//myScript
 	wp_enqueue_script( 'whippsofacto-script-min', get_template_directory_uri() . '/js/script.min.js', array(), '20151215', true );
 
 	// font Awesome
 	wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+
+
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
