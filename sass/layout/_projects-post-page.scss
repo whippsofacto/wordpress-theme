@@ -18,9 +18,67 @@ display: none;
 
 }
 
+//projects page arrow
 
+
+#post_arrow_projects {
+list-style: none;
+top: 49.5%;
+width: 100%;
+position: absolute;
+text-align: center;
+
+}
+
+#post_arrow_projects .fa-arrow-circle-down{
+   font-size: 45px;
+   color: rgba(255,255,255,0.1);
+   transition: 1s;
+   cursor: pointer;
+   animation-name: enter_projects;
+   animation-duration: 1.8s;
+   animation-iteration-count: infinite;
+   animation-timing-function: ease-out;
+   animation-delay: 1s;
+}
+
+#post_arrow_projects .fa-arrow-circle-down:hover{
+  color: rgba(220,46,87,0.8);
+}
+
+//header arrow animation
+// animation for the arrow and arrow container
+@keyframes enter_projects {
+    0% {}
+    3% {}
+    98%{color: rgba(220,46,87,0.8);}
+}
 
 
 .project_page_posts_container{
   flex: 1 1 50%;
+}
+
+
+
+//posts
+.project-blurb{
+  text-align: left;
+  width: 85%;
+  margin: auto;
+}
+
+@media (max-width:695px) and (min-width:0px) {
+  //arrow top
+  #post_arrow_projects {
+    top: 46%;
+ }
+}
+
+ @media (max-width:630px) and (min-width:0px) {
+   //arrow top
+   #post_arrow_projects {
+    display: none;
+  }
+
 }

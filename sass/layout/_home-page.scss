@@ -105,33 +105,30 @@
   border: 1px transparent solid;
   border-radius: 50%;
   padding: 10px;
-  animation-delay: 6s;
 }
 
 // animate the movement of the container
 .arrow-container{
   width: 100%;
-  margin-top: 130px;
   visibility: hidden;
   animation-name: moveArrow;
   animation-duration: 1.4s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-out;
-  animation-delay: 6s;
 }
 
 // animation for the arrow and arrow container
 @keyframes container {
-    0% {background-color: crimson;}
+    0% {background-color: #4f4f4f;}
     3% {opacity: 1;}
-    98%{opacity: 0; padding: 45px; font-size: 55px;}
+    98%{opacity: 0; padding: 45px;}
 }
 
 @keyframes moveArrow{
   5%{opacity: 1;}
   6%{visibility:visible;}
   94%{opacity: 0;}
-  97%{visibility:hidden; margin-top: -50px;}
+  97%{visibility:hidden;}
 }
 // end of animation
 
@@ -180,7 +177,7 @@
         5%{opacity: 1;}
         6%{visibility:visible;}
         94%{opacity: 0;}
-        97%{visibility:hidden; margin-top: -40px;}
+        97%{visibility:hidden;}
       }
 }
 
@@ -191,7 +188,7 @@
       }
 
       .home-text{
-        width: 100%;
+        width: 90%;
         margin: 0 auto;
         padding-top: 75px;
       }
@@ -218,11 +215,11 @@
 
 
        .arrow-container{
-         margin-top: 90px;
+         margin-top: 20px;
        }
 
       #arrow_container > .fa{
-        font-size: 25px;
+        font-size: 30px;
         padding: 7px;
       }
 
@@ -230,13 +227,13 @@
        5%{opacity: 1;}
        6%{visibility:visible;}
        94%{opacity: 0;}
-       97%{visibility:hidden; margin-top: -50px;}
+       97%{visibility:hidden;}
      }
 
      @keyframes container {
-         0% {background-color: crimson;}
+         0% {background-color: #4f4f4f;}
          3% {opacity: 1;}
-         98%{opacity: 0; padding: 25px; font-size: 35px;}
+         98%{opacity: 0; padding: 25px; }
      }
 
 }

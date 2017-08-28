@@ -1329,7 +1329,7 @@ body {
 }
 
 .entry-content {
-  width: 95%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -1458,10 +1458,55 @@ body {
   display: none;
 }
 
+#post_arrow_projects {
+  list-style: none;
+  top: 49.5%;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+}
+
+#post_arrow_projects .fa-arrow-circle-down {
+  font-size: 45px;
+  color: rgba(255, 255, 255, 0.1);
+  transition: 1s;
+  cursor: pointer;
+  animation-name: enter_projects;
+  animation-duration: 1.8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+  animation-delay: 1s;
+}
+
+#post_arrow_projects .fa-arrow-circle-down:hover {
+  color: rgba(220, 46, 87, 0.8);
+}
+
+@keyframes enter_projects {
+  98% {
+    color: rgba(220, 46, 87, 0.8);
+  }
+}
 .project_page_posts_container {
   flex: 1 1 50%;
 }
 
+.project-blurb {
+  text-align: left;
+  width: 85%;
+  margin: auto;
+}
+
+@media (max-width: 695px) and (min-width: 0px) {
+  #post_arrow_projects {
+    top: 46%;
+  }
+}
+@media (max-width: 630px) and (min-width: 0px) {
+  #post_arrow_projects {
+    display: none;
+  }
+}
 /*--------------------------------------------
 # home page
 --------------------------------------------*/
@@ -1561,23 +1606,20 @@ body {
   border: 1px transparent solid;
   border-radius: 50%;
   padding: 10px;
-  animation-delay: 6s;
 }
 
 .arrow-container {
   width: 100%;
-  margin-top: 130px;
   visibility: hidden;
   animation-name: moveArrow;
   animation-duration: 1.4s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-out;
-  animation-delay: 6s;
 }
 
 @keyframes container {
   0% {
-    background-color: crimson;
+    background-color: #4f4f4f;
   }
   3% {
     opacity: 1;
@@ -1585,7 +1627,6 @@ body {
   98% {
     opacity: 0;
     padding: 45px;
-    font-size: 55px;
   }
 }
 @keyframes moveArrow {
@@ -1600,7 +1641,6 @@ body {
   }
   97% {
     visibility: hidden;
-    margin-top: -50px;
   }
 }
 .hidden-arrow {
@@ -1649,7 +1689,6 @@ body {
     }
     97% {
       visibility: hidden;
-      margin-top: -40px;
     }
   }
 }
@@ -1660,7 +1699,7 @@ body {
   }
 
   .home-text {
-    width: 100%;
+    width: 90%;
     margin: 0 auto;
     padding-top: 75px;
   }
@@ -1685,11 +1724,11 @@ body {
   }
 
   .arrow-container {
-    margin-top: 90px;
+    margin-top: 20px;
   }
 
   #arrow_container > .fa {
-    font-size: 25px;
+    font-size: 30px;
     padding: 7px;
   }
 
@@ -1705,12 +1744,11 @@ body {
     }
     97% {
       visibility: hidden;
-      margin-top: -50px;
     }
   }
   @keyframes container {
     0% {
-      background-color: crimson;
+      background-color: #4f4f4f;
     }
     3% {
       opacity: 1;
@@ -1718,7 +1756,6 @@ body {
     98% {
       opacity: 0;
       padding: 25px;
-      font-size: 35px;
     }
   }
 }
@@ -1728,6 +1765,10 @@ body {
 .widget-area ul a {
   color: #474747;
   text-decoration: none;
+}
+
+.widget {
+  margin: 0 0 0px !important;
 }
 
 #menu_span {
@@ -1780,7 +1821,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  margin-right: 5px;
+  margin-right: 4px !important;
 }
 
 #sidebar_nav_elements section:nth-child(2) h2 {
@@ -1867,7 +1908,7 @@ body {
   }
 
   #nav_span {
-    width: 50px;
+    width: 40px;
     margin: 0 auto;
   }
 
@@ -1878,7 +1919,7 @@ body {
 
   #nav_span #nav_span_inner span {
     width: 100%;
-    height: 8px;
+    height: 5px;
     margin-top: 5px;
     background-color: #4f4f4f;
     display: block;
@@ -1888,7 +1929,7 @@ body {
 
   #nav_span #nav_span_inner p {
     width: 100%;
-    height: 10px;
+    font-size: 12px;
     margin-top: 2px;
     color: #4f4f4f;
     display: block;
@@ -1908,13 +1949,13 @@ body {
   }
 
   .nav-transition-class {
-    transform: rotate(45deg) translate(5px, 0px);
+    transform: rotate(45deg) translate(5px, 2px);
     transition: .2s linear;
     background-color: #DC2E57 !important;
   }
 
   .nav-transition-class-top {
-    transform: rotate(-45deg) translate(-10px, 13px);
+    transform: rotate(-45deg) translate(-10px, 11px);
     transition: .2s linear;
     background-color: #DC2E57 !important;
   }
@@ -2030,6 +2071,10 @@ body {
 /*--------------------------------------------------------------
 # customHeader
 --------------------------------------------------------------*/
+a {
+  outline: 0;
+}
+
 .site-title {
   text-align: center;
 }
@@ -2063,6 +2108,7 @@ body {
   position: absolute;
   top: 15%;
   display: flex;
+  max-width: 2000px;
   width: 100%;
 }
 
@@ -2074,9 +2120,6 @@ body {
 
 .header-container img {
   margin: 0 auto;
-}
-
-.header-container img {
   max-width: 250px;
   max-height: 250px;
 }
@@ -2084,6 +2127,7 @@ body {
 #header_image div img {
   width: 100%;
   height: auto;
+  min-height: 85vh;
 }
 
 #page_header_container {
@@ -2129,6 +2173,11 @@ body {
   text-align: center;
 }
 
+#post_arrow {
+  list-style: none;
+  margin-left: -5%;
+}
+
 #post_arrow .fa-arrow-circle-down {
   font-size: 45px;
   margin-right: 0 auto;
@@ -2148,11 +2197,54 @@ body {
   color: rgba(255, 255, 255, 0.9);
 }
 
+#projects_link {
+  width: 100%;
+  text-align: center;
+}
+
 @keyframes enter {
   98% {
     color: rgba(255, 255, 255, 0.9);
   }
 }
+@media (max-width: 695px) and (min-width: 0px) {
+  #page_header_container {
+    text-align: center;
+  }
+
+  #site_tite_and_description {
+    width: 100%;
+    margin: 0 auto;
+    background-color: transparent;
+  }
+
+  #site_tite_and_description h1 a {
+    font-size: 25px;
+  }
+
+  #site_tite_and_description p {
+    font-size: 25px;
+  }
+
+  #post_arrow {
+    text-align: center;
+  }
+}
+#wp-custom-header-video-button {
+  float: right;
+  top: 2%;
+  right: 2%;
+  position: absolute;
+}
+
+.wp-custom-header-video-play {
+  background-color: rgba(1, 0, 0, 0.5);
+}
+
+.wp-custom-header-video-pause {
+  background-color: red;
+}
+
 @media (max-width: 910px) and (min-width: 0px) {
   .header-outter-container {
     top: 13%;
@@ -2179,21 +2271,6 @@ body {
 .off-hover {
   opacity: 1;
   transition: ease-in-out opacity 1s;
-}
-
-#wp-custom-header-video-button {
-  float: right;
-  top: 2%;
-  right: 2%;
-  position: absolute;
-}
-
-.wp-custom-header-video-play {
-  background-color: rgba(1, 0, 0, 0.5);
-}
-
-.wp-custom-header-video-pause {
-  background-color: red;
 }
 
 /*--------------------------------------------------------------*/

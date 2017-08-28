@@ -122,7 +122,7 @@ jQuery(postLinks).click(function(){
 });
 
 // single page scroller
-
+    //all pages
 		jQuery(document).ready(function() {
 			jQuery('#post_arrow').onePageNav({
       changeHash: false,
@@ -132,3 +132,16 @@ jQuery(postLinks).click(function(){
       easing: 'swing'
     });
 	});
+
+  //projects page only
+  // single page scroller
+
+  		jQuery(document).ready(function() {
+  			jQuery('#header_outter_container').onePageNav({
+        changeHash: false,
+        scrollSpeed: 1000,
+        scrollThreshold: 0.5,
+        filter: '',
+        easing: 'swing'
+      });
+  	});
