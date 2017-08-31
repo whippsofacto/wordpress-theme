@@ -376,6 +376,30 @@ p {
   font-family: "Heebo", sans-serif;
 }
 
+li {
+  font-family: "Heebo", sans-serif;
+}
+
+a {
+  outline: 0;
+}
+
+a:visited {
+  outline: 0;
+}
+
+a:hover {
+  outline: 0;
+}
+
+a:active {
+  outline: 0;
+}
+
+a:focus {
+  outline: 0 !important;
+}
+
 #primary-menu li {
   font-family: "Poppins", sans-serif;
   font-size: 2em;
@@ -393,11 +417,11 @@ p {
 .sub-menu h2 {
   background-color: #DC2E57;
   color: white;
-  font-family: "Heebo", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
   padding-left: 5px;
-  min-width: 185px;
-  max-width: 185px;
+  min-width: 150px;
+  max-width: 150px;
 }
 
 .sub-menu li {
@@ -488,6 +512,7 @@ p {
   height: 100%;
   padding-left: 5px;
   border: 0px;
+  opacity: 0.8;
 }
 
 .search-form > label > .search-field:-ms-input-placeholder {
@@ -498,6 +523,7 @@ p {
   height: 100%;
   padding-left: 5px;
   border: 0px;
+  opacity: 0.8;
 }
 
 .search-form > label > .search-field::placeholder {
@@ -508,6 +534,7 @@ p {
   height: 100%;
   padding-left: 5px;
   border: 0px;
+  opacity: 0.8;
 }
 
 .search-form > label > .search-field:focus {
@@ -1599,9 +1626,7 @@ body {
   }
 }
 .project_page_posts_container {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 50%;
-          flex: 1 1 50%;
+  width: 100%;
 }
 
 .project-blurb {
@@ -1702,7 +1727,7 @@ body {
 }
 
 #home_title {
-  font-family: "Poppins", sans-serif;
+  font-family: "Amatic SC", cursive;
   text-transform: uppercase;
   text-align: left;
   padding-left: 30px;
@@ -1857,12 +1882,16 @@ body {
 }
 @media (max-width: 490px) and (min-width: 0px) {
   #video_home_full > header > #my_player_container {
-    width: 350%;
+    width: 340%;
     left: -71%;
   }
 
+  .my-home-page {
+    width: 100%;
+  }
+
   .home-text {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     padding-top: 75px;
   }
@@ -1875,15 +1904,16 @@ body {
 
   #home_name {
     font-size: 1.7em;
-    text-align: center;
+    text-align: left;
     padding: 0;
+    padding-left: 20px;
   }
 
   #home_title {
     font-size: 1.9em;
-    text-align: center;
+    text-align: left;
     padding: 0;
-    letter-spacing: -1.4px;
+    padding-left: 20px;
   }
 
   .arrow-container {
@@ -2038,7 +2068,7 @@ body {
   background-color: #DC2E57;
   color: white;
   margin-top: 8px;
-  margin-bottom: -8px;
+  margin-bottom: 0;
   padding: 0px 5px 0px 5px;
   max-width: 165px;
   cursor: pointer;
@@ -2050,6 +2080,20 @@ body {
   color: #DC2E57;
   -webkit-transition: 0.5s ease-in;
   transition: 0.5s ease-in;
+}
+
+#sidebar_nav_elements section:nth-child(2) div ul li {
+  margin-bottom: 2px;
+  font-size: 21px;
+}
+
+#sidebar_nav_elements section:nth-child(2) div ul li:hover {
+  border-bottom: #DC2E57 1px solid;
+  background-color: #DC2E57;
+}
+
+#sidebar_nav_elements section:nth-child(2) div ul li:hover a {
+  color: white;
 }
 
 .menu-projects-container {
@@ -2072,7 +2116,7 @@ body {
 }
 
 .show-section {
-  height: 150px !important;
+  height: 275px !important;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -2136,6 +2180,27 @@ body {
   margin-right: 15px;
 }
 
+#sidebar_nav_elements section:nth-child(3) h2:hover {
+  background-color: white;
+  color: #DC2E57;
+  -webkit-transition: 0.5s ease-in;
+  transition: 0.5s ease-in;
+}
+
+#sidebar_nav_elements section:nth-child(3) ul li {
+  margin-bottom: 2px;
+  font-size: 21px;
+}
+
+#sidebar_nav_elements section:nth-child(3) ul li:hover {
+  border-bottom: #DC2E57 1px solid;
+  background-color: #DC2E57;
+}
+
+#sidebar_nav_elements section:nth-child(3) ul li:hover a {
+  color: white;
+}
+
 @media (max-width: 695px) and (min-width: 0px) {
   .site-content {
     margin-top: 5px;
@@ -2173,6 +2238,30 @@ body {
     letter-spacing: 2px;
     -webkit-transition: .2s linear;
     transition: .2s linear;
+  }
+
+  #sidebar_nav_elements section:nth-child(2) h2 {
+    margin-top: 4px;
+    max-width: unset;
+    margin-right: 0px;
+    margin-bottom: 0px;
+  }
+
+  #sidebar_nav_elements section:nth-child(2) ul li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 19px;
+  }
+
+  #sidebar_nav_elements section:nth-child(3) h2 {
+    margin-top: 13px;
+    padding: 0px 10px 0px 10px !important;
+  }
+
+  #sidebar_nav_elements section:nth-child(3) ul li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 23px;
   }
 
   #middle_span {
@@ -2260,12 +2349,12 @@ body {
   }
 
   #sidebar_nav_elements section:nth-child(2) {
-    margin-top: -30px;
     display: block;
   }
 
   #sidebar_nav_elements section:nth-child(2) h2 {
     text-align: center !important;
+    margin-top: 3px;
   }
 
   #sidebar_nav_elements section:nth-child(2) div {
@@ -2274,22 +2363,14 @@ body {
   }
 
   #sidebar_nav_elements section:nth-child(2) div ul li {
-    margin-bottom: 2px;
-    border-bottom: #4f4f4f 1px solid;
     text-align: center;
   }
 
-  #sidebar_nav_elements section:nth-child(2) div ul li a {
-    color: #4f4f4f;
-  }
-
-  #sidebar_nav_elements section:nth-child(3) {
-    margin-top: -19px;
-  }
-
   #sidebar_nav_elements section:nth-child(3) h2 {
-    margin-right: 0px;
-    padding: 0px 5px 0px 5px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5px;
+    padding: 0px 10px 0px 10px;
   }
 
   #sidebar_nav_elements section:nth-child(3) ul {
@@ -2300,7 +2381,6 @@ body {
 
   #sidebar_nav_elements section:nth-child(3) ul li {
     margin-bottom: 2px;
-    border-bottom: #4f4f4f 1px solid;
   }
 
   #sidebar_nav_elements section:nth-child(3) ul li a {
@@ -2313,6 +2393,28 @@ body {
     display: flex !important;
   }
 }
+/*--------------------------------------------
+# 404
+--------------------------------------------*/
+#error_search form label input {
+  background-color: white;
+  color: crimson;
+  border: 1px #ccc solid;
+  border-radius: 5px !important;
+}
+
+#error_search form label input::-webkit-input-placeholder {
+  color: crimson;
+}
+
+#error_search form label input:-ms-input-placeholder {
+  color: crimson;
+}
+
+#error_search form label input::placeholder {
+  color: crimson;
+}
+
 /*--------------------------------------------
 # footer
 --------------------------------------------*/
@@ -2334,10 +2436,6 @@ body {
 /*--------------------------------------------------------------
 # customHeader
 --------------------------------------------------------------*/
-a {
-  outline: 0;
-}
-
 .site-title {
   text-align: center;
 }
@@ -2443,6 +2541,10 @@ a {
 #post_arrow {
   list-style: none;
   margin-left: -5%;
+}
+
+#post_arrow li a {
+  outline: 0;
 }
 
 #post_arrow .fa-arrow-circle-down {

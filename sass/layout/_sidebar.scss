@@ -75,7 +75,7 @@
     background-color: #DC2E57;
     color:white;
     margin-top: 8px;
-    margin-bottom: -8px;
+    margin-bottom: 0;
     padding: 0px 5px 0px 5px;
     max-width: 165px;
     cursor: pointer;
@@ -89,9 +89,22 @@
   }
 
 
-  #sidebar_nav_elements section:nth-child(2) ul li a{
+  #sidebar_nav_elements section:nth-child(2) div ul li{
+    margin-bottom: 2px;
+    font-size: 21px;
   }
 
+  #sidebar_nav_elements section:nth-child(2) div ul li:hover{
+    border-bottom: #DC2E57 1px solid;
+    background-color: #DC2E57;
+  }
+
+  #sidebar_nav_elements section:nth-child(2) div ul li:hover a{
+    color: white;
+  }
+
+
+//dropdowns
   .menu-projects-container{
     display: flex;
     flex-direction: column;
@@ -104,7 +117,7 @@
   }
 
   .show-section{
-    height: 150px !important;
+    height: 275px !important;
     transition:0.4s;
 
   }
@@ -154,6 +167,27 @@
     transition:0.4s;
     margin-right: 15px;
   }
+
+  #sidebar_nav_elements section:nth-child(3) h2:hover{
+    background-color: white;
+    color: #DC2E57;
+    transition: 0.5s ease-in;
+  }
+
+
+  #sidebar_nav_elements section:nth-child(3)  ul li{
+    margin-bottom: 2px;
+    font-size: 21px;
+  }
+
+  #sidebar_nav_elements section:nth-child(3)  ul li:hover{
+    border-bottom: #DC2E57 1px solid;
+    background-color: #DC2E57;
+  }
+
+  #sidebar_nav_elements section:nth-child(3)  ul li:hover a{
+    color: white;
+  }
   //---end of every page nav --------------------------------------------//
 
   @media (max-width:695px) and (min-width:0px) {
@@ -191,7 +225,34 @@
       letter-spacing: 2px;
       transition: .2s linear;
     }
+    #sidebar_nav_elements section:nth-child(2) h2{
+      margin-top: 4px;
+      max-width: unset;
+      margin-right: 0px;
+      margin-bottom: 0px;
+     }
 
+     #sidebar_nav_elements section:nth-child(2) ul li {
+       padding-top: 5px;
+       padding-bottom: 5px;
+       font-size: 19px;
+     }
+
+     #sidebar_nav_elements section:nth-child(2) ul li:hover {
+
+     }
+
+
+    #sidebar_nav_elements section:nth-child(3) h2{
+    margin-top: 13px;
+    padding: 0px 10px 0px 10px!important;
+     }
+
+     #sidebar_nav_elements section:nth-child(3) ul li {
+       padding-top: 5px;
+       padding-bottom: 5px;
+       font-size: 23px;
+     }
 
     #top_span{
 
@@ -262,12 +323,12 @@
 
     //projects sections -------//
     #sidebar_nav_elements section:nth-child(2){
-      margin-top: -30px;
       display:block;
     }
 
     #sidebar_nav_elements section:nth-child(2) h2{
       text-align: center!important;
+      margin-top: 3px;
     }
 
     #sidebar_nav_elements section:nth-child(2) div{
@@ -276,27 +337,23 @@
     }
 
     #sidebar_nav_elements section:nth-child(2) div ul li{
-      margin-bottom: 2px;
-      border-bottom: #4f4f4f 1px solid;
       text-align: center;
     }
 
-    #sidebar_nav_elements section:nth-child(2) div ul li a{
-      color: #4f4f4f;
 
-    }
 
 
 
     //posts sections --------//
 
     #sidebar_nav_elements section:nth-child(3){
-     margin-top: -19px;
     }
 
    #sidebar_nav_elements section:nth-child(3) h2{
-      margin-right: 0px;
-      padding: 0px 5px 0px 5px;
+      margin-right: auto;
+      margin-left: auto;
+      margin-top: 5px;
+      padding: 0px 10px 0px 10px;
     }
 
 
@@ -308,7 +365,6 @@
 
     #sidebar_nav_elements section:nth-child(3) ul li{
      margin-bottom: 2px;
-     border-bottom: #4f4f4f 1px solid;
     }
 
     #sidebar_nav_elements section:nth-child(3) ul li a{

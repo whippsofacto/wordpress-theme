@@ -20,8 +20,14 @@ get_header(); ?>
 				<div class="page-content">
 					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'whippsofacto' ); ?></p>
 
+				<div id="error_search">
 					<?php
-						get_search_form();
+					  get_search_form();
+						 ?>
+				  </div>
+				 <?php
+						/* commented out all of the 404 page content from here ----------------------//
+						/* remove lines 26 and 27 to recreate original 404 --------------------------//
 
 						the_widget( 'WP_Widget_Recent_Posts' );
 					?>
@@ -44,10 +50,18 @@ get_header(); ?>
 					<?php
 
 						/* translators: %1$s: smiley */
+
+
+
+						/* commented out by whippy remove to restore 404 page ----------
+
 						$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'whippsofacto' ), convert_smilies( ':)' ) ) . '</p>';
 						the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
 
 						the_widget( 'WP_Widget_Tag_Cloud' );
+
+
+						end of my comments ------------------------------------------- */
 					?>
 
 				</div><!-- .page-content -->
@@ -57,4 +71,5 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
+get_sidebar();
 get_footer();

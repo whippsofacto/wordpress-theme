@@ -1,7 +1,4 @@
 
-a {
-   outline: 0;
-}
 
 // remove all text decorarion from the header
 .site-title{
@@ -120,6 +117,10 @@ list-style: none;
 margin-left: -5%;
 }
 
+#post_arrow li a {
+  outline: 0;
+}
+
 #post_arrow .fa-arrow-circle-down{
    font-size: 45px;
    margin-right: 0 auto;
@@ -151,7 +152,6 @@ text-align: center;
     3% {}
     98%{color: rgba(255,255,255,0.9);}
 }
-
 
 //Device widths media queries ------------------------//
 

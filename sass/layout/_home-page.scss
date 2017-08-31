@@ -87,7 +87,7 @@
 
 //my title text
 #home_title{
-  font-family: $popins;
+  font-family: $amantic;
   text-transform: uppercase;
   text-align: left;
   padding-left: 30px;
@@ -184,11 +184,15 @@
 @media (max-width:490px) and (min-width:0px) {
 
       #video_home_full > header > #my_player_container{
-        width: 350%; left: -71%;
+        width: 340%; left: -71%;
+      }
+
+      .my-home-page{
+        width: 100%;
       }
 
       .home-text{
-        width: 90%;
+        width: 100%;
         margin: 0 auto;
         padding-top: 75px;
       }
@@ -202,15 +206,17 @@
 
       #home_name{
         font-size: 1.7em;
-        text-align: center;
+        text-align: left;
         padding: 0;
+        padding-left: 20px;
       }
 
        #home_title{
          font-size: 1.9em;
-         text-align: center;
+         text-align: left;
          padding: 0;
-         letter-spacing: -1.4px;
+         padding-left: 20px;
+
        }
 
 

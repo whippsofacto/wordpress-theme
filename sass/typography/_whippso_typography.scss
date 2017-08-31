@@ -72,6 +72,33 @@ p{
   font-family: $heebo;
 }
 
+li{
+  font-family: $heebo;
+}
+
+a{
+  outline: 0;
+}
+
+a:visited{
+  outline: 0;
+}
+
+a:hover{
+  outline: 0;
+}
+
+a:active{
+  outline: 0;
+}
+
+a:focus{
+  outline: 0!important;
+}
+
+
+
+
 //Nav Type ----------------------------//
 
 #primary-menu li{
@@ -91,11 +118,11 @@ background-color: crimson;
 .sub-menu h2{
   background-color: #DC2E57;
   color: white;
-  font-family: $heebo;
+  font-family: $popins;
   font-weight: 400;
   padding-left: 5px;
-  min-width: 185px;
-  max-width: 185px;
+  min-width: 150px;
+  max-width: 150px;
 }
 
 .sub-menu li{
@@ -191,6 +218,7 @@ color: #4f4f4f;
   height: 100%;
   padding-left: 5px;
   border: 0px;
+  opacity: 0.8;
 }
 
 .search-form > label > .search-field:focus{

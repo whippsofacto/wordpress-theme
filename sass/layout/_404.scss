@@ -1,0 +1,11 @@
+#error_search form label input{
+  background-color: white;
+  color: crimson;
+  border: 1px #ccc solid;
+  border-radius: 5px!important;
+}
+
+#error_search form label input::placeholder{
+  color: crimson;
+
+}
