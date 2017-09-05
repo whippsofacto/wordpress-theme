@@ -18,13 +18,13 @@ get_header(); ?>
 		<main id="main" class="site-main">
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 			 <section id ='projects_blurb'> <p> A list of the latest posts and projects all summarised in one helpful place. </p> </section>
-			 <div id="main-container">
+			 <div id="main-container blog-container">
 
 				 	<?php
 					$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
           //echo "paged " . $paged;
 					$args = array( 'post_type' => array('post','projects'),
-												 'posts_per_page' => 10,
+												 'posts_per_page' => 5,
 												 'paged' => $paged
 											 );
       		$loop = new WP_Query( $args );

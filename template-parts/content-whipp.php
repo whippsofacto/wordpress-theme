@@ -17,7 +17,7 @@
 		 </a>
 		 <?php } ?>
 	</header><!-- .entry-header -->
-	<div class="entry-content">
+	<div class="entry-content blog-content">
 		<?php
 		if ( has_post_thumbnail()) {
 					?><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"> <?php
@@ -27,7 +27,6 @@
 					echo '<div class="entry-content">';
 					the_content();
 					echo '</div>';
-		      echo '</div>';
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'whippsofacto' ),
 				'after'  => '</div>',

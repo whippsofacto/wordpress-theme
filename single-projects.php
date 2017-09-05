@@ -25,7 +25,7 @@ get_header(); ?>
 
 		endwhile; // End of the loop.
 		?>
-
+		<?php the_tags() ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 <?php

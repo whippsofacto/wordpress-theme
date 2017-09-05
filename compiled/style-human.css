@@ -1472,10 +1472,14 @@ body {
   display: none;
 }
 
+.entry-content {
+  width: 85%;
+}
+
 #main-container {
   display: flex;
   flex-wrap: wrap;
-  width: 90%;
+  width: 75%;
   margin: 0 auto;
 }
 
@@ -1584,10 +1588,6 @@ body {
     color: rgba(220, 46, 87, 0.8);
   }
 }
-.project_page_posts_container {
-  width: 100%;
-}
-
 .project-blurb {
   text-align: left;
   width: 85%;
@@ -2250,6 +2250,17 @@ body {
 
 #error_search form label input::placeholder {
   color: crimson;
+}
+
+/*--------------------------------------------
+# blog
+--------------------------------------------*/
+.blog-container {
+  width: 90% !important;
+}
+
+.blog-content {
+  width: 100% !important;
 }
 
 /*--------------------------------------------
