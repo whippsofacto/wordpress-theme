@@ -1500,10 +1500,6 @@ body {
   width: 100%;
 }
 
-.inline-image {
-  width: auto !important;
-}
-
 .header-blurb {
   font-size: 20px;
 }
@@ -1609,13 +1605,21 @@ body {
   }
 }
 @media (max-width: 490px) and (min-width: 0px) {
+  #header_container {
+    display: none;
+  }
+
   code {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .entry-title {
     line-height: 55px;
-    font-size: 25px;
+    font-size: 32px;
+  }
+
+  .author a {
+    font-size: 16px;
   }
 
   .header-blurb {
@@ -1974,7 +1978,7 @@ body {
 
 #sidebar_nav_elements section:nth-child(2) div ul li {
   margin-bottom: 2px;
-  font-size: 21px;
+  font-size: 16px;
 }
 
 #sidebar_nav_elements section:nth-child(2) div ul li:hover {
@@ -2000,6 +2004,11 @@ body {
 .show-section {
   height: 275px !important;
   transition: 0.4s;
+}
+
+.menu-projects-container ul li a {
+  padding-right: 5px;
+  padding-left: 5px;
 }
 
 #sidebar_nav_elements section:nth-child(3) {
@@ -2052,7 +2061,9 @@ body {
 
 #sidebar_nav_elements section:nth-child(3) ul li {
   margin-bottom: 2px;
-  font-size: 21px;
+  font-size: 16px;
+  padding-right: 5px;
+  padding-left: 5px;
 }
 
 #sidebar_nav_elements section:nth-child(3) ul li:hover {
@@ -2111,7 +2122,7 @@ body {
   #sidebar_nav_elements section:nth-child(2) ul li {
     padding-top: 5px;
     padding-bottom: 5px;
-    font-size: 19px;
+    font-size: 16px;
   }
 
   #sidebar_nav_elements section:nth-child(3) h2 {
@@ -2122,7 +2133,7 @@ body {
   #sidebar_nav_elements section:nth-child(3) ul li {
     padding-top: 5px;
     padding-bottom: 5px;
-    font-size: 23px;
+    font-size: 16px;
   }
 
   #middle_span {

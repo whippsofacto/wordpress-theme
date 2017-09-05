@@ -91,8 +91,7 @@
 
   #sidebar_nav_elements section:nth-child(2) div ul li{
     margin-bottom: 2px;
-    font-size: 21px;
-  }
+    font-size: 16px;  }
 
   #sidebar_nav_elements section:nth-child(2) div ul li:hover{
     border-bottom: #DC2E57 1px solid;
@@ -119,8 +118,13 @@
   .show-section{
     height: 275px !important;
     transition:0.4s;
-
   }
+
+  .menu-projects-container ul li a{
+    padding-right:5px;
+    padding-left:5px;
+}
+
 
 
 
@@ -177,7 +181,9 @@
 
   #sidebar_nav_elements section:nth-child(3)  ul li{
     margin-bottom: 2px;
-    font-size: 21px;
+    font-size: 16px;
+    padding-right: 5px;
+    padding-left:5px;
   }
 
   #sidebar_nav_elements section:nth-child(3)  ul li:hover{
@@ -235,7 +241,7 @@
      #sidebar_nav_elements section:nth-child(2) ul li {
        padding-top: 5px;
        padding-bottom: 5px;
-       font-size: 19px;
+       font-size: 16px;
      }
 
      #sidebar_nav_elements section:nth-child(2) ul li:hover {
@@ -251,7 +257,7 @@
      #sidebar_nav_elements section:nth-child(3) ul li {
        padding-top: 5px;
        padding-bottom: 5px;
-       font-size: 23px;
+       font-size: 16px;
      }
 
     #top_span{

@@ -34,9 +34,6 @@ text-align: left;
   width: 100%;
 }
 
-.inline-image{
-  width:auto!important;
-}
 
 .header-blurb{
   font-size:20px;
@@ -158,25 +155,33 @@ text-align: center;
 
 //change the font sizes small mobile
 @media (max-width:490px) and (min-width:0px) {
-code{
-  font-size: 10px;
-}
+  #header_container{
+    display: none;
+  }
 
-.entry-title{
-line-height: 55px;
-font-size: 25px;
-}
+  code{
+    font-size: 12px;
+  }
 
-.header-blurb{
-  font-size:15px;
-}
+  .entry-title{
+  line-height: 55px;
+  font-size: 32px;
+  }
 
-.blog-mini-title{
-  font-size: 18px;
-}
+  .author a{
+   font-size: 16px;
+ }
 
-.blog-blurb{
-  font-size: 15px;
-}
+  .header-blurb{
+    font-size:15px;
+  }
+
+  .blog-mini-title{
+    font-size: 18px;
+  }
+
+  .blog-blurb{
+    font-size: 15px;
+  }
 
 }
