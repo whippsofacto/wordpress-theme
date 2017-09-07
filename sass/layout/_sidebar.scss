@@ -116,8 +116,8 @@
   }
 
   .show-section{
-    height: 275px !important;
-    transition:0.4s;
+    height: initial !important;
+    transition: .5s;
   }
 
   .menu-projects-container ul li a{
@@ -293,9 +293,8 @@
     #secondary{
       padding-top: 12px;
       margin-top: 0px;
-      border-bottom: 1px solid #4f4f4f;
+      border-bottom: 1px solid #CCC;
       border-top: 1px solid #4f4f4f;
-
     }
 
     .hidden-menu{
@@ -324,6 +323,7 @@
     #sidebar_nav_elements section:first-child ul{
         margin-top: 0px;
         margin-left: 0px;
+        font-size:14px;
     }
 
 
@@ -335,6 +335,8 @@
     #sidebar_nav_elements section:nth-child(2) h2{
       text-align: center!important;
       margin-top: 3px;
+      font-size:26px;
+
     }
 
     #sidebar_nav_elements section:nth-child(2) div{
@@ -360,6 +362,7 @@
       margin-left: auto;
       margin-top: 5px;
       padding: 0px 10px 0px 10px;
+      font-size:26px;
     }
 
 
@@ -381,6 +384,10 @@
       display:flex!important;
     }
 
+    //show the posts and projects
+    .show-section{
+      height: initial !important;
+    }
 
   }
 

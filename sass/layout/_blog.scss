@@ -1,7 +1,19 @@
 .blog-container{
-  width: 90% !important;
+  width: 100% !important;
 }
 
 .blog-content{
   width: 100%!important;
+}
+
+.blog-header{
+width: 80%;
+}
+
+.blog-header a {
+  margin: 0 auto;
+}
+
+.blog-header a h2{
+  text-align: left;
 }
