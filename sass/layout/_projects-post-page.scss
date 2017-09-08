@@ -1,19 +1,7 @@
-.project_page_posts_container > .entry-content > h3{
-display: none;
-}
 
-.entry-content{
-  width: 85%;
-}
-
-#main-container{
-  display: flex;
-  flex-wrap: wrap;
-  width: 75%;
-  margin: 0 auto;
-}
-
-#main-container > .project_page_posts_container > article > .entry-content > .other-projects{
+//blog-header image
+//show the image only on the blog screen
+.blog-header-image{
   display: none;
 }
 
@@ -133,7 +121,7 @@ text-align: center;
 //posts
 .project-blurb{
   text-align: left;
-  width: 85%;
+  width: 89%;
   margin: auto;
 }
 
@@ -181,6 +169,11 @@ text-align: center;
 
   .blog-blurb{
     font-size: 15px;
+  }
+
+  .project-blurb{
+    width: 95%;
+    justify: left;
   }
 
 }

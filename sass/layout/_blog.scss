@@ -1,19 +1,94 @@
+
+//outter container for all of blog page posts
 .blog-container{
-  width: 100% !important;
+margin: 0 auto;
 }
 
-.blog-content{
-  width: 100%!important;
-}
-
-.blog-header{
-width: 80%;
-}
-
-.blog-header a {
+//inner container for all of blog page posts
+.project-page-posts-container{
+  width: 80%;
   margin: 0 auto;
+  text-align: left;
 }
 
-.blog-header a h2{
-  text-align: left;
+//styles the header links ---------------------------------------------------/
+.blog-header a{
+  text-decoration: none;
+  transition: .2s;
+  background-color:#DC2E57;
+  display: inline-block;
+  padding: 0px 10px 0px 10px;
+}
+
+.blog-header a h2 {
+  color: white;
+  background-color:#DC2E57;
+  text-align: center;
+  margin: 0;
+}
+
+.blog-header a:hover{
+  transition: .2s;
+  background-color:white;
+  display: inline-block;
+  padding: -1px 9px -1px 9px;
+  border: 1px solid #DC2E57;
+}
+
+.blog-header a:hover h2{
+  transition: .2s;
+  color: #DC2E57;
+  background-color:white;
+  display: inline-block;
+
+}
+
+//takes the input from the post content, shows it in the header above the
+//posts and projects loop.
+.blog-page-text{
+  width:80% !important;
+}
+
+//removes the padding set in the posts and projects articles ----------------/
+.blog-content div section{
+  width: inherit;
+}
+
+// displays the header graphic that is hidden on the projects page ---------/
+.blog-content > div > .project-blurb > p > .blog-header-image{
+  display:inline-block;
+  margin-bottom: 20px;
+}
+
+//moves the author title closer to the header
+.blog-content > div > .project-blurb > .author{
+  margin-top: 0px;
+}
+
+
+//pagination controls ----------------------------------------//
+.prev-next-posts{
+  margin-bottom: 30px;
+  margin-top: 30px;
+  text-align: right;
+  font-family: $popins;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+
+}
+
+.prev-next-posts div a{
+  color: #4f4f4f;
+  background-color:white;
+  padding: 15px 10px 15px 10px;
+  text-decoration: none;
+  transition: .2s;
+}
+
+.prev-next-posts div a:hover{
+  color: white;
+  background-color:#ccc;
+  padding: 15px 10px 15px 10px;
+  text-decoration: none;
+  transition: .2s;
 }

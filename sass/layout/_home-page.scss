@@ -67,10 +67,11 @@
   cursor: pointer;
 }
 
+
 .home-text > h1, .home-text > h2 {
   color: #4f4f4f;
   width: 60%;
-  background-color: #fff;
+  background-color: rgba(255,255,255,0.8);
   margin: 0 auto;
   font-size: 3em;
 }
@@ -93,9 +94,15 @@
   padding-left: 30px;
 }
 
+#arrow_container{
+ width: 80%!important;
+ position: absolute;
+ text-align: right;
+}
+
 // animate the icon within the container
 #arrow_container > .fa{
-  color: white;
+  color: #4f4f4f;
   font-size: 39px;
   margin: 0 auto;
   animation-name: container;
@@ -104,13 +111,12 @@
   animation-timing-function: linear;
   border: 1px transparent solid;
   border-radius: 50%;
-  padding: 10px;
+  padding: 45px;
 }
 
 // animate the movement of the container
 .arrow-container{
   width: 100%;
-  visibility: hidden;
   animation-name: moveArrow;
   animation-duration: 1.4s;
   animation-iteration-count: infinite;
@@ -119,16 +125,11 @@
 
 // animation for the arrow and arrow container
 @keyframes container {
-    0% {background-color: #4f4f4f;}
-    3% {opacity: 1;}
-    98%{opacity: 0; padding: 45px;}
+  //  0% {background-color: #ccc; opacity:.8;}
+//    98%{padding:15px; }
 }
 
 @keyframes moveArrow{
-  5%{opacity: 1;}
-  6%{visibility:visible;}
-  94%{opacity: 0;}
-  97%{visibility:hidden;}
 }
 // end of animation
 
@@ -159,25 +160,24 @@
       .home-text > h1, .home-text > h2 {
        color: #4f4f4f;
        width: 85%;
-       background-color: #fff;
        margin: 0 auto;
        font-size: 2em;
      }
 
-      #arrow_container{
-      width: 100%;
-      }
+     #arrow_container{
+      width: 90%!important;
+      position: absolute;
+      text-align: right;
+     }
 
       #arrow_container > .fa{
-        font-size: 34px;
-        padding: 8px;
+        font-size: 40px;
+        padding: 30px;
       }
 
-      @keyframes moveArrow{
-        5%{opacity: 1;}
-        6%{visibility:visible;}
-        94%{opacity: 0;}
-        97%{visibility:hidden;}
+      @keyframes container {
+      //   0% {background-color: #ccc; opacity:.8;}
+      //    98%{padding:10px;margin-top:20px;}
       }
 }
 
@@ -192,7 +192,7 @@
       }
 
       .home-text{
-        width: 100%;
+        width: 90%;
         margin: 0 auto;
         padding-top: 75px;
       }
@@ -201,7 +201,6 @@
       .home-text > h1, .home-text > h2 {
         color: #4f4f4f;
         width: 100%;
-        background-color: #fff;
      }
 
       #home_name{
@@ -226,20 +225,12 @@
 
       #arrow_container > .fa{
         font-size: 30px;
-        padding: 7px;
+        padding: 26px;
       }
 
-     @keyframes moveArrow{
-       5%{opacity: 1;}
-       6%{visibility:visible;}
-       94%{opacity: 0;}
-       97%{visibility:hidden;}
-     }
-
      @keyframes container {
-         0% {background-color: #4f4f4f;}
-         3% {opacity: 1;}
-         98%{opacity: 0; padding: 25px; }
+        // 0% {background-color: #ccc; opacity:.8;}
+  //       98%{padding:10px;margin-top:16px;}
      }
 
 }
