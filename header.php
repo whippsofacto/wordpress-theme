@@ -31,7 +31,6 @@
 	  <header id="masthead" class="site-header">
 			 <div class="site-branding">
 				<?php
-			  the_custom_logo();
 			  if ( is_front_page() && is_home() ) : ?>
 			  <div id="header_outter_container" class="header-outter-container"><div id="header_container" class="header-container"> <?the_post_thumbnail()?>  </div></div>
 				<div id="site_tite_and_description" class="site-title-and-description"><h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
@@ -42,9 +41,14 @@
 			</div>
 			<!-- Show video from header media on the front page -->
 			<?php elseif (is_front_page() ) :?>
-				<?php the_custom_header_markup();?>
-				<div id="header_outter_container" class="header-outter-container"><div id="header_container" class="header-container"> <?the_post_thumbnail()?>  </div></div>
-				<div id="site_tite_and_description" class="site-title-and-description"><h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<div id="header_outter_container" class="header-outter-container"><div id="header_container" class="header-container">  </div></div>
+				<div id="site_tite_and_description" class="site-title-and-description home-site-title"><h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name','description' ); ?></a></h1>
+					<?php	$description = get_bloginfo( 'description', 'display' );
+						 if ( $description || is_customize_preview() ) : ?>
+							<p class="site-description home-site-description"><?php echo "$description" /* WPCS: xss ok. */ ?></p>
+							<?php
+						endif;?>
+
 
 				<?php elseif (is_search() ) :?>
 					<div id='page_header_container'>
