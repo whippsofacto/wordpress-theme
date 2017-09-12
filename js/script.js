@@ -65,10 +65,8 @@ jQuery('#fs_searchNav').click(function(){
 jQuery(document).bind("mouseup touchend",function(e)
               {
                   var container = jQuery("#search-container");
-                  var projects = jQuery('#sidebar_nav_elements > section:nth-child(2) h2');
-                  var projectsDiv = jQuery('#sidebar_nav_elements > section:nth-child(2) > div');
-                  var posts = jQuery('#sidebar_nav_elements > section:nth-child(3) h2');
-                  var postsUl = jQuery('#sidebar_nav_elements > section:nth-child(3) > ul');
+                  var projects = jQuery('#sidebar_nav_elements > section:nth-child(2) > div > ul > li > a');
+                  var posts = jQuery('#sidebar_nav_elements > section:nth-child(3) > ul > li > a');
 
                   // if the target of the click isn't the container nor a descendant of the container
                   if (!container.is(e.target) && container.has(e.target).length === 0)
@@ -79,13 +77,13 @@ jQuery(document).bind("mouseup touchend",function(e)
                   // apply the same script to the projects drop down
                   if (!projects.is(e.target) && container.has(e.target).length === 0)
                   {
-                    jQuery(projectsDiv).removeClass('show-section');
+                    jQuery("#sidebar_nav_elements > section:nth-child(2) > div").removeClass('show-section');
                   }
 
                   // apply the same script to the posts drop down
                   if (!posts.is(e.target) && container.has(e.target).length === 0)
                   {
-                    jQuery(postsUl).removeClass('show-section');
+                    jQuery('#sidebar_nav_elements > section:nth-child(3) > ul').removeClass('show-section');
                   }
 
       });

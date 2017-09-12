@@ -36,7 +36,7 @@ text-align: left;
   font-family: $heebo;
 }
 
-.project-blurb p a{
+.project-blurb a{
  //color: #333;
  color: #DC2E57;
  background-color:white;
@@ -46,22 +46,22 @@ text-align: left;
  border: 1px solid #DC2E57;
 }
 
-.project-blurb p a:visited{
+.project-blurb  a:visited{
  text-decoration: none;
  color: #DC2E57;
 }
 
-.project-blurb p a:active{
+.project-blurb  a:active{
  text-decoration: none;
  color: #DC2E57;
 }
 
-.project-blurb p a:focus{
+.project-blurb  a:focus{
  text-decoration: none;
  color: #DC2E57;
 }
 
-.project-blurb p a:hover{
+.project-blurb a:hover{
  text-decoration: none;
  background-color: #DC2E57;
  color: white;

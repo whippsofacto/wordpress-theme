@@ -1,14 +1,74 @@
 .site-footer{
-  height: 300px;
   width: 100%;
   margin: 0 auto;
   background-color: #212121;
   color: white;
+  font-size: 10px;
 }
 
 .site-info{
   width: 80%;
   margin: 0 auto;
   text-align: center;
-  margin-top: 10%;
+  margin-top: 4%;
+}
+
+footer .site-info{
+  margin-bottom: 4%;
+}
+
+
+.icons{
+  width: 100%;
+  margin-top: 4%;
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 2%;
+}
+
+.icons i{
+ padding: 30px;
+ transition: .5s linear;
+}
+
+.copyright{
+  width: 100%;
+  margin:0 auto;
+  text-align: center;
+  font-size: 13px;
+  font-family: $heebo;
+}
+
+
+
+
+.footer-icon:hover{
+  font-size: inherit;
+  color: white;
+  cursor: pointer;
+  background-color:#DC2E57;
+  transition: .5s linear;
+
+}
+
+li.current-menu-item {
+background: #3FAEA5;
+color:#fff;
+}
+
+@media (max-width:490px) and (min-width:0px) {
+
+
+  .icons i{
+   padding: 15px;
+  }
+
+  .copyright{
+    margin-top:4%;
+  }
+
+  footer .site-info{
+    margin-bottom: 10%;
+  }
+
 }

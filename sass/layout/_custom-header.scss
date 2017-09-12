@@ -73,8 +73,6 @@ display: flex;
 #site_tite_and_description{
   position: absolute;
   top: 0;
-  margin-top: 2%;
-  margin-left: 2%;
   width: 100%;
 }
 
@@ -123,8 +121,9 @@ font-family: $amantic;
 
 #post_arrow{
   text-align: center;
-  margin-top:25%;
-  padding-left:-2%;
+  margin-top:20%;
+  padding:0px;
+  widht: 100%;
 }
 
 #post_arrow {
