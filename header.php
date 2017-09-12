@@ -111,22 +111,7 @@
 	</div><!--#end of Elements -->
   <div id="rightElements">
 		<div id="nav_contact_form" class="overlay-content">
-			<form id="myForm" action="#" method="post">
-				<h2> Get In Touch </h2>
-				<label> Name </label>
-				<input class="formFlex" type="text" id="fname" name="firstname">
-				<br>
-				<label> Email </label>
-				<input class="formFlex" type="text" id="email" name="email">
-				<br>
-				<label> Subject </label>
-				<input class="formFlex" type="text" id="subject" name="subject">
-			  <br>
-				<label> Message </label>
-	      <textarea class="formFlex" id="message" name="message"></textarea>
-				<br>
-				<button id="submitFormButton" class="formFlex" type="submit" value="Submit">Submit</button>
-			</form>
+			<?php echo do_shortcode( '[contact-form-7 id="2079" title="Contact Form"]' ); ?>
 		</div>
 				<hr class='socialHr'>
 			 <div id="social_nav_container">

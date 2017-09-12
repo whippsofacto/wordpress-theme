@@ -839,6 +839,10 @@ a:hover, a:active {
   color: #4f4f4f;
 }
 
+#myForm input {
+  width: 100%;
+}
+
 .formFlex {
   flex: 1;
   width: 100%;
@@ -862,6 +866,10 @@ a:hover, a:active {
 
 #myForm #message {
   min-height: 200px;
+}
+
+div.wpcf7-mail-sent-ok {
+  border-color: #4f4f4f;
 }
 
 .search-container {
@@ -1768,6 +1776,16 @@ body {
 /* ----------- iPhone 5 and 5S ----------- */
 /* Portrait and Landscape */
 /* Portrait */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  #search-container .search-form .search-field {
+    height: 75px;
+    margin-top: 87%;
+  }
+
+  .search-full {
+    height: 300%;
+  }
+}
 /* Landscape */
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
   .home {
@@ -2300,9 +2318,11 @@ footer .site-info {
   transition: .5s linear;
 }
 
-li.current-menu-item {
-  background: #3FAEA5;
-  color: #fff;
+.current-menu-item a {
+  background: white !important;
+  border: 1px solid #4f4f4f !important;
+  color: #4f4f4f !important;
+  transition: .5s linear;
 }
 
 @media (max-width: 490px) and (min-width: 0px) {

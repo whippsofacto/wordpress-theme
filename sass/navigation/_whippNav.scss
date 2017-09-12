@@ -115,6 +115,10 @@ text-align:left;
 color: #4f4f4f;
 }
 
+#myForm input{
+width: 100%;
+}
+
 .formFlex{
  flex: 1;
  width:100%;
@@ -139,6 +143,10 @@ color: #4f4f4f;
 #myForm #message{
   min-height: 200px;
 
+}
+//
+div.wpcf7-mail-sent-ok{
+  border-color: #4f4f4f;
 }
 
 //search button
