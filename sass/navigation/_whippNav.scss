@@ -238,16 +238,28 @@ color: #4f4f4f !important;
 .fa-search:hover{
   font-size: 1.2em;
   color: #5198B8;
+  transition: .2s ease-out;
+
 }
 
 .fa-twitter:hover{
   font-size: 1.2em;
-  color: #35D7DB;;
+  color: #35D7DB;
+  transition: .2s ease-out;
+
 }
 
 .fa-github:hover{
   font-size: 1.2em;
   color: #44AD63;
+  transition: .2s ease-out;
+
+}
+
+.fa-envelope-o:hover{
+  font-size: 1.2em;
+  color: deepskyblue;
+  transition: .2s ease-out;
 }
 
 .fa-times-circle-o:hover{

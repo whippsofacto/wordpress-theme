@@ -115,8 +115,55 @@ text-align: center;
 }
 
 
+//search page
+.search-title a{
+  text-decoration: none;
+  color: #DC2E57;
+  transition: 0.5s;
+  padding-left:5px;
+  padding-right: 5px;
+}
 
+.search-title a:hover{
+  background-color: #DC2E57;
+  color:white;
+  transition: 0.5s;
+}
 
+.search-results-page{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.query{
+color: #DC2E57;
+padding-left: 5px;
+padding-right: 5px;
+font-family: heebo;
+font-weight: 200;
+text-transform: uppercase;
+}
+
+#search_page_form form label input{
+  background-color: white !important;
+  color:#4f4f4f !important;
+  border-bottom: 1px solid #ccc;
+}
+
+#search_page_form form label input::placeholder{
+  color: #4f4f4f;
+}
+
+#search_page_form form input{
+  color: #4f4f4f;
+  transition: 0.5s ease-in;
+}
+
+#search_page_form form input:hover{
+  background-color: #4f4f4f;
+  color:white;
+  transition: 0.5s ease-in;
+}
 
 //posts
 .project-blurb{
@@ -136,6 +183,19 @@ text-align: center;
    //arrow top
    #post_arrow_projects {
     display: none;
+  }
+
+  //search
+  #search_page_form form{
+  display: inline;
+  }
+
+  #search_page_form form input{
+    margin-top: 25px;
+    float: right;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-right: 5%;
   }
 
 }

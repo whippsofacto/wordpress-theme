@@ -1002,16 +1002,29 @@ div.wpcf7-mail-sent-ok {
 .fa-search:hover {
   font-size: 1.2em;
   color: #5198B8;
+  -webkit-transition: .2s ease-out;
+  transition: .2s ease-out;
 }
 
 .fa-twitter:hover {
   font-size: 1.2em;
   color: #35D7DB;
+  -webkit-transition: .2s ease-out;
+  transition: .2s ease-out;
 }
 
 .fa-github:hover {
   font-size: 1.2em;
   color: #44AD63;
+  -webkit-transition: .2s ease-out;
+  transition: .2s ease-out;
+}
+
+.fa-envelope-o:hover {
+  font-size: 1.2em;
+  color: deepskyblue;
+  -webkit-transition: .2s ease-out;
+  transition: .2s ease-out;
 }
 
 .fa-times-circle-o:hover {
@@ -1691,6 +1704,67 @@ body {
     color: rgba(220, 46, 87, 0.8);
   }
 }
+.search-title a {
+  text-decoration: none;
+  color: #DC2E57;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.search-title a:hover {
+  background-color: #DC2E57;
+  color: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.search-results-page {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.query {
+  color: #DC2E57;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-family: heebo;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+
+#search_page_form form label input {
+  background-color: white !important;
+  color: #4f4f4f !important;
+  border-bottom: 1px solid #ccc;
+}
+
+#search_page_form form label input::-webkit-input-placeholder {
+  color: #4f4f4f;
+}
+
+#search_page_form form label input:-ms-input-placeholder {
+  color: #4f4f4f;
+}
+
+#search_page_form form label input::placeholder {
+  color: #4f4f4f;
+}
+
+#search_page_form form input {
+  color: #4f4f4f;
+  -webkit-transition: 0.5s ease-in;
+  transition: 0.5s ease-in;
+}
+
+#search_page_form form input:hover {
+  background-color: #4f4f4f;
+  color: white;
+  -webkit-transition: 0.5s ease-in;
+  transition: 0.5s ease-in;
+}
+
 .project-blurb {
   text-align: left;
   width: 89%;
@@ -1705,6 +1779,18 @@ body {
 @media (max-width: 630px) and (min-width: 0px) {
   #post_arrow_projects {
     display: none;
+  }
+
+  #search_page_form form {
+    display: inline;
+  }
+
+  #search_page_form form input {
+    margin-top: 25px;
+    float: right;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-right: 5%;
   }
 }
 @media (max-width: 490px) and (min-width: 0px) {
@@ -1887,16 +1973,6 @@ body {
 /* ----------- iPhone 5 and 5S ----------- */
 /* Portrait and Landscape */
 /* Portrait */
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-  #search-container .search-form .search-field {
-    height: 75px;
-    margin-top: 87%;
-  }
-
-  .search-full {
-    height: 300%;
-  }
-}
 /* Landscape */
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
   .home {
@@ -2501,6 +2577,15 @@ footer .site-info {
   transition: .5s linear;
 }
 
+.icons a {
+  text-decoration: none;
+  color: white;
+}
+
+.icons a:visited {
+  color: white;
+}
+
 .copyright {
   width: 100%;
   margin: 0 auto;
@@ -2526,6 +2611,65 @@ footer .site-info {
   transition: .5s linear;
 }
 
+.current-menu-item:hover {
+  background-color: white !important;
+  border-bottom: 0px solid white !important;
+  display: initial !important;
+}
+
+.flex {
+  margin: 0 auto;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#contact_page_form {
+  margin: 0 auto;
+  width: 80%;
+  -webkit-box-flex: 1.6;
+      -ms-flex: 1.6;
+          flex: 1.6;
+}
+
+#aboutMe_Blurb {
+  -webkit-box-flex: 0.9;
+      -ms-flex: 0.9;
+          flex: 0.9;
+  padding-left: 5%;
+}
+
+@media (max-width: 730px) and (min-width: 0px) {
+  #contact_page_form div form #myForm {
+    display: initial !important;
+  }
+
+  #contact_page_form div form #myForm h2 {
+    font-size: 1.3em;
+  }
+
+  .flex {
+    display: initial !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .no-matches form {
+    display: inline-block !important;
+  }
+}
 @media (max-width: 490px) and (min-width: 0px) {
   .icons i {
     padding: 15px;

@@ -129,7 +129,7 @@
 				 </a>
 				</div>
 				<div class="social-nav-inner-container">
-					<a href="https://www.twitter.com/whippsofacto">
+					<a href="http://www.portfolio.whippsofacto.com/contact">
 						<i class="fa fa-envelope-o" aria-hidden="true"></i>
 				 </a>
 				</div>

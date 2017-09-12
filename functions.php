@@ -74,6 +74,8 @@ function whippsofacto_setup() {
 	* 1. Add video header as part of the CUSTOMIZE section of homepage
 	* 2. Add my Custom Page/Post-Type
 	* 3. include Featured Images
+	* 4. Add tags
+	* 5. Search Shortcode
 	*/
 
 	//1: Activate Video and Graphic Header
@@ -90,6 +92,9 @@ function whippsofacto_setup() {
 function tags_support_all() {
 	register_taxonomy_for_object_type('post_tag', 'projects');
 }
+
+ //5: Search as shortcode
+ add_shortcode('search-short-code', 'get_search_form');
 
 // ensure all tags are included in queries
 function tags_support_query($wp_query) {

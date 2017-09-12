@@ -143,3 +143,12 @@ jQuery(postLinks).click(function(){
         easing: 'swing'
       });
   	});
+
+
+//contact form
+var wpcf7Elm = document.querySelector( '.wpcf7' );
+
+wpcf7Elm.addEventListener( 'wpcf7mailsent', function( event ) {
+    //alert( "Fire!" );
+    jQuery("#myForm").css('display','none');
+}, false );

@@ -36,10 +36,12 @@
 		<?php elseif ( is_search() ) : ?>
 
 			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'whippsofacto' ); ?></p>
-			<div id='error_search'>
+			<div id='error_search' class='search-results-page'>
+			<div id='search_page_form' class='no-matches'>
 			<?php
 				get_search_form();
-
+				?>
+				<?php
 		else : ?>
 
 			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'whippsofacto' ); ?></p>
@@ -47,6 +49,7 @@
 				get_search_form();
 
 		endif; ?>
-	</div>
+   	</div>
+	 </div>
 	</div><!-- .page-content -->
 </section><!-- .no-results -->

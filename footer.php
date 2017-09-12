@@ -15,15 +15,22 @@
 	<?php
 	//homepage added ------------//
 	  if(is_front_page()){?>
-		<footer> </footer>
 		<?php } else { ?>
   <!-- to here ------------------->
 			<footer id="colophon" class="site-footer">
 				<div class="icons">
-					<i class="fa fa-github footer-icon" aria-hidden="true"></i>
-					<i class="fa fa-twitter footer-icon" aria-hidden="true"></i>
-					<i class="fa fa-envelope-o footer-icon" aria-hidden="true"></i>
-					<i class="fa fa-search footer-icon" aria-hidden="true"></i>
+					<a href="https://www.github.com/whippsofacto">
+					 <i class="fa fa-github footer-icon" aria-hidden="true"></i>
+				  </a>
+					<a href="https://www.twitter.com/whippsofacto">
+					 <i class="fa fa-twitter footer-icon" aria-hidden="true"></i>
+				  </a>
+					<a href="http://www.portfolio.whippsofacto.com/contact">
+					 <i class="fa fa-envelope-o footer-icon" aria-hidden="true"></i>
+				  </a>
+					<a href='http://localhost/whippPress/search'>
+					 <i class="fa fa-search footer-icon" aria-hidden="true"></i>
+				  </a>
 				</div>
 				<div>
 					<p class='copyright'> &#169; Stephen Whipp 2017 </p>
