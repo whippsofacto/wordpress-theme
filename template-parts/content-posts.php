@@ -20,12 +20,11 @@
 
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php whippsofacto_posted_on(); ?>
+			<p>Posted on: <?php the_date(); ?></p>
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>
 	</header><!-- .entry-header -->
-
 	<div class="entry-content">
 		<?php
 			the_content( sprintf(

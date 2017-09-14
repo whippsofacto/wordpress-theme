@@ -20,7 +20,7 @@
 
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php whippsofacto_posted_on(); ?>
+			<?php the_date(); ?>
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>
