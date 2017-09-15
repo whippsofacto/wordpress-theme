@@ -94,3 +94,111 @@ margin: 0 auto;
   text-decoration: none;
   transition: .2s;
 }
+
+//-------tags
+.tags-links a{
+  color: #DC2E57;
+  background-color:white;
+  border: 1px solid #DC2E57;
+  padding-left:5px;
+  padding-right: 5px;
+  font-family:$heebo;
+  transition: 0.3s ease-in;
+  text-decoration: none;
+  margin-top:5px;
+  display: inline-block;
+}
+
+.tags-links a:hover{
+  color:white;
+  background-color:#DC2E57;
+  transition: 0.3s ease-in;
+}
+// entry title:
+
+.entry-title{
+line-height: 50px;
+width: 90%;
+margin-top: 5%;
+margin-left: auto;
+margin-right: auto;
+text-align: left;
+}
+
+.entry-meta{
+width: 90%;
+margin: 0 auto;
+text-align: left;
+}
+
+@media (max-width:695px) and (min-width:0px) {
+.entry-title{
+ }
+}
+
+@media (max-width:490px) and (min-width:0px) {
+ .entry-title{
+  line-height: 36px;
+  width:95%;
+  font-size: 39px;
+ }
+
+ .entry-meta{
+   width:95%;
+ }
+}
+
+//--------------tags in project pages
+
+.project-tags{
+  margin-top:5%;
+  margin-bottom: 5%;
+}
+
+//------------------------ tags page
+.entry-title a{
+text-decoration: none;
+color: #4f4f4f;
+}
+
+.entry-title a:focus{
+text-decoration: none;
+color: #4f4f4f;
+}
+
+.entry-title a:visited{
+text-decoration: none;
+color: #4f4f4f;
+}
+
+// archive-header -----------------------//
+
+.archive-header > .page-title{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+//archive results:
+
+.results{
+font-family: heebo;
+font-weight: 200;
+color: #ccc;
+text-transform: uppercase;
+border-bottom: 1px solid #ccc;
+border-top: 1px solid #ccc;
+}
+
+.results-number{
+padding-left: 10px;
+padding-right: 10px;
+font-family: poppins;
+color: crimson;
+}
+
+//search ------------------------
+.search-title a:hover{
+  color: white;
+}

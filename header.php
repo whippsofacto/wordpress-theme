@@ -49,6 +49,24 @@
 							<?php
 						endif;?>
 
+					<?php elseif (is_archive() ) :?>
+						<div id='page_header_container'>
+						 <div id='header_image'> <?php the_custom_header_markup();?></div>
+						<div id="site_tite_and_description" class="site-title-and-description"><h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+							<?php	$description = get_bloginfo( 'description', 'display' );
+								 if ( $description || is_customize_preview() ) : ?>
+									<p class="site-description"><?php echo "$description" /* WPCS: xss ok. */ ?></p>
+									<?php
+								endif;?>
+								<div id="post_title">
+									<?php the_archive_title( '<p> [', ']</p>' ); ?>
+								</div>
+								<div id='post_arrow'>
+									<a href='#secondary'><i class="fa fa-arrow-circle-down" aria-hidden="true"></i></a>
+								</div>
+						</div>
+
+
 
 				<?php elseif (is_search() ) :?>
 					<div id='page_header_container'>

@@ -25,8 +25,16 @@ get_header(); ?>
 
 		endwhile; // End of the loop.
 		?>
-		<?php the_tags() ?>
-		</main><!-- #main -->
+		<div class="project-tags">
+		 <?php	/* translators: used between list items, there is a space after the comma */
+		 	$tags_list = get_the_tag_list( '', esc_html_x( ' ', 'list item separator', 'whippsofacto' ) );
+			 if ( $tags_list ) {
+				 /* translators: 1: list of tags. */
+				 printf( '<span class="tags-links">' . esc_html__( '%1$s', 'whippsofacto' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+			 }
+		 ?>
+	  </div>
+	 </main><!-- #main -->
 	</div><!-- #primary -->
 <?php
 get_sidebar();

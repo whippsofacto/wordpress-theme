@@ -16,9 +16,14 @@ get_header(); ?>
 		if ( have_posts() ) : ?>
 
 			<header class="page-header archive-header">
+        <h1 class="page-title results">
 				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="archive-description">', '</div>' );
+				 echo "Results: <span class='results-number'>" . $wp_query->found_posts . "</span>";
+        ?>
+				</h1>
+				<?php
+				//the_archive_title('<h1 class="page-title">','</h1>');
+				//the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->
 

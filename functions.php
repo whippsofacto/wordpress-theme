@@ -76,6 +76,8 @@ function whippsofacto_setup() {
 	* 3. include Featured Images
 	* 4. Add tags
 	* 5. Search Shortcode
+	* 6. Tags Shortcode
+	* 7. Extend the get_the_archive_title() function to remove the word "TAG"
 	*/
 
 	//1: Activate Video and Graphic Header
@@ -96,6 +98,19 @@ function tags_support_all() {
  //5: Search as shortcode
  add_shortcode('search-short-code', 'get_search_form');
 
+ //6. Tags as shortcode
+ 		function sc_taglist(){
+     return get_the_tag_list();
+   }
+ add_shortcode('tags', 'sc_taglist');
+
+//7 Remove "tag" from get_archive_title()
+add_filter( 'get_the_archive_title', function ($title) {
+       if ( is_tag() ) {
+            $title = single_tag_title( '', false );
+          }
+     return $title;
+});
 // ensure all tags are included in queries
 function tags_support_query($wp_query) {
 	if ($wp_query->get('tag')) $wp_query->set('post_type', 'any');

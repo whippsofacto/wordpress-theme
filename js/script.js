@@ -8,9 +8,8 @@ jQuery('#header_container > img').hover(
 );
 
 jQuery(window).scroll(function(){
-    jQuery("#header_container").css("opacity", 1 - jQuery(window).scrollTop() / 130);
-    jQuery("#header_container").css("transition", "ease-in-out opacity 5s;" - jQuery(window).scrollTop() / 130);
-
+    jQuery("#header_container").css("opacity", 1 - jQuery(window).scrollTop() / 30);
+    jQuery("#header_container").css("transition", "ease-in-out opacity 5s;" - jQuery(window).scrollTop() / 30);
   });
 
 /* web vr page title */

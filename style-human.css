@@ -1658,6 +1658,16 @@ body {
   font-size: 22px;
 }
 
+.blog-page-text {
+  margin: 0 auto;
+  padding-bottom: 5%;
+}
+
+.project-blurb {
+  margin-bottom: 3% !important;
+  border-bottom: 1px #ccc solid;
+}
+
 #post_arrow_projects {
   list-style: none;
   top: 49.5%;
@@ -1826,6 +1836,7 @@ body {
   .project-blurb {
     width: 95%;
     justify: left;
+    padding-bottom: 25px;
   }
 }
 /*--------------------------------------------
@@ -2212,7 +2223,7 @@ body {
 }
 
 #sidebar_nav_elements section:nth-child(3) ul li {
-  margin-bottom: 2px;
+  margin-bottom: 7px;
   font-size: 16px;
   padding-right: 5px;
   padding-left: 5px;
@@ -2539,6 +2550,100 @@ body {
   text-decoration: none;
   -webkit-transition: .2s;
   transition: .2s;
+}
+
+.tags-links a {
+  color: #DC2E57;
+  background-color: white;
+  border: 1px solid #DC2E57;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-family: "Heebo", sans-serif;
+  -webkit-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+  text-decoration: none;
+  margin-top: 5px;
+  display: inline-block;
+}
+
+.tags-links a:hover {
+  color: white;
+  background-color: #DC2E57;
+  -webkit-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+}
+
+.entry-title {
+  line-height: 50px;
+  width: 90%;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.entry-meta {
+  width: 90%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+@media (max-width: 490px) and (min-width: 0px) {
+  .entry-title {
+    line-height: 36px;
+    width: 95%;
+    font-size: 39px;
+  }
+
+  .entry-meta {
+    width: 95%;
+  }
+}
+.project-tags {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.entry-title a {
+  text-decoration: none;
+  color: #4f4f4f;
+}
+
+.entry-title a:focus {
+  text-decoration: none;
+  color: #4f4f4f;
+}
+
+.entry-title a:visited {
+  text-decoration: none;
+  color: #4f4f4f;
+}
+
+.archive-header > .page-title {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.results {
+  font-family: heebo;
+  font-weight: 200;
+  color: #ccc;
+  text-transform: uppercase;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+}
+
+.results-number {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: poppins;
+  color: crimson;
+}
+
+.search-title a:hover {
+  color: white;
 }
 
 /*--------------------------------------------
