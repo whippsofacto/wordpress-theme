@@ -1609,7 +1609,7 @@ body {
 }
 
 .search-results-page {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -1644,8 +1644,11 @@ body {
 #search_page_form form input {
   color: #4f4f4f;
   transition: 0.5s ease-in;
-  font-size: 2em !important;
   font-family: "Poppins", sans-serif !important;
+  padding-top: 10px;
+  margin-top: auto;
+  padding-bottom: 10px;
+  font-size: 23px;
 }
 
 #search_page_form form input:hover {

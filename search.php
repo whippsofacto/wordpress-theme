@@ -8,7 +8,6 @@
  */
 
 get_header(); ?>
-
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main">
 
@@ -16,7 +15,8 @@ get_header(); ?>
 		if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<h1 class="page-title" style="display:none;"><?php
+				<h1 class="page-title entry-title"><?php
+
 					/* translators: %s: search query. */
 					printf( esc_html__( 'Search Results for: %s', 'whippsofacto' ), '<span class="query">' . get_search_query() . '</span>' );
 				?></h1>
