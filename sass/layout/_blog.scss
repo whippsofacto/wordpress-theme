@@ -131,6 +131,12 @@ margin: 0 auto;
 text-align: left;
 }
 
+.page-title{
+  width: 80%;
+  padding-bottom: 2%;
+  border-bottom: 1px solid #ccc;
+}
+
 @media (max-width:695px) and (min-width:0px) {
 .entry-title{
  }
@@ -145,6 +151,19 @@ text-align: left;
 
  .entry-meta{
    width:95%;
+ }
+
+ .page-title{
+  width: 80%;
+  margin-top: 11%;
+  padding-bottom:10%;
+ }
+
+ .archive-header > .page-title{
+   margin-bottom: 15%;
+   border-top: 0;
+   margin-top: 2%;
+   width: 94% !important;
  }
 }
 
@@ -178,6 +197,8 @@ color: #4f4f4f;
   margin-left: auto;
   margin-right: auto;
   text-align: left;
+  padding-bottom: 0;
+
 }
 
 //archive results:
